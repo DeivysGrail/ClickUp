@@ -139,7 +139,7 @@ function Game(props) {
         }}>
             <Score score={score}/>
             <h1>Meilleur score : {highScore}</h1>
-            {<h1>{loose && <Loose score={score}/>}</h1>}
+            {<h1>{loose && <Loose score={score} tryAgain={() => location.reload()}</Loose>}/>}</h1>}
             {pause && <p>Pause jusqu'à 120</p>}
             {medium && <MediumBoutonBonus medium1={() => setScore(score += 19)} medium2={() => {
                 setFallingTrigger(false)
