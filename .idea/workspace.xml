@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="992809bd-f7ea-416d-ae2c-176738efc95b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../PokeAPi/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokeAPi/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RouterDOlm/Router/src/Router/Home.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api_test/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api_test/api/src/API/apiFetchAnime.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api_test/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boxyGenerator/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boxyGenerator/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../component/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../component/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cours_react.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cours_react/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cours_react/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cours_react/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cours_react/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../css-lesson/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../css-lesson/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gestion_abonnement.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gestion_abonnements.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../portfolio.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-lessons/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-lessons/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-lessons/react-lessons/src/API/Container.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-lessons/react-lessons/src/API/Container.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-lessons/react-lessons/src/Interval/Interval.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-lessons/react-lessons/src/multipleRef/Static.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-lessons/react-lessons/src/spinner.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux/redux.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../projet/cvAnais/cvAnais.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../projet/untitled.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../projet/vanala.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="SCSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/node_modules/@eslint/eslintrc/universal.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2fM31pOEczq5bxeQ2LcpX154Mor" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/bastien/Bureau/Projet front-end/projet++/clickup/src/assets",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "/home/bastien/Téléchargements/node-v18.18.0-linux-x64/bin/node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets" />
+      <recent name="$PROJECT_DIR$/src/style" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="npm dev" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="992809bd-f7ea-416d-ae2c-176738efc95b" name="Changes" comment="" />
+      <created>1713596909735</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713596909735</updated>
+      <workItem from="1713596910776" duration="4118000" />
+      <workItem from="1713601057934" duration="4424000" />
+      <workItem from="1713626706789" duration="4444000" />
+      <workItem from="1713766268953" duration="4606000" />
+      <workItem from="1713855634577" duration="4794000" />
+      <workItem from="1713941045190" duration="9675000" />
+      <workItem from="1713964829397" duration="5452000" />
+      <workItem from="1714024043146" duration="9537000" />
+      <workItem from="1714044366449" duration="111000" />
+      <workItem from="1714044506904" duration="392000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="github/main" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/main" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

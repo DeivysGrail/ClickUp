@@ -1,0 +1,6 @@
+Mettre des petits boutons à sniper pour mettre la barre sur pause :
+- Gros boutons => Simple à cliquer => 1 secondes de pause
+- Moyen boutons => Moyennement simple à cliquer => 2 Secondes de pause
+- Petits boutons => Compliqués de cliquer dessus => 5 secondes de pause
+
+Apparition de bulles random qui rajoutent des points et des bonus

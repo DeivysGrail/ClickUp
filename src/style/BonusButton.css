@@ -1,0 +1,109 @@
+@font-face {
+  src: url("src/assets/Poppins/Poppins-Regular.ttf");
+  font-family: Poppins; }
+/*  FontSize   */
+/*  Fonts   */
+/*  Colors :   */
+/*  Border Radius   */
+/*  Borders   */
+.EasyButton-1 {
+  position: absolute; }
+  .EasyButton-1__button {
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    border-radius: 50rem;
+    font-weight: bolder;
+    font-size: .9rem;
+    background: linear-gradient(99deg, #78e87a 0%, #d99bcb 100%);
+    transform: scale(1);
+    position: relative;
+    z-index: 100; }
+
+.EasyButton-2 {
+  position: absolute; }
+  .EasyButton-2__button {
+    width: max-content;
+    height: 40px;
+    color: #f1f1F1;
+    padding: 3px 5px;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: .9rem;
+    background: linear-gradient(20deg, #9a1828 0%, #1099cb 100%);
+    transform: scale(1);
+    position: relative;
+    z-index: 100; }
+
+.EasyButton-3 {
+  position: absolute; }
+  .EasyButton-3__button {
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    border-radius: 50rem;
+    font-weight: bold;
+    font-size: .9rem;
+    background: linear-gradient(99deg, #78e87a 0%, #d99bcb 100%);
+    position: relative;
+    z-index: 100;
+    transform: scale(1); }
+
+.MediumButton-1 {
+  position: absolute;
+  z-index: 100; }
+  .MediumButton-1__button {
+    height: 40px;
+    width: 50px;
+    padding: 1px;
+    font-weight: bold;
+    font-size: .9rem;
+    color: #191f22;
+    border-radius: 5px;
+    border: solid white 3px;
+    background: linear-gradient(99deg, #78e87a 0%, #d99bcb 100%); }
+
+.MediumButton-2 {
+  position: absolute;
+  z-index: 100; }
+  .MediumButton-2__button {
+    height: 30px;
+    width: max-content;
+    padding: 3px;
+    font-weight: bold;
+    font-size: .9rem;
+    color: #eeeeee;
+    border-radius: 5px;
+    border: solid white .1px;
+    background: linear-gradient(99deg, #156270 0%, #691756 100%); }
+
+.MediumButton-3 {
+  position: absolute;
+  z-index: 100; }
+  .MediumButton-3__button {
+    height: 50px;
+    width: 50px;
+    padding: 1px;
+    font-weight: bold;
+    font-size: .7rem;
+    color: #191f22;
+    border: inset white 2px;
+    border-radius: 50rem;
+    background: linear-gradient(99deg, #78e87a 0%, #d99bcb 100%); }
+
+.HardButton-1 {
+  position: absolute; }
+  .HardButton-1__button {
+    background: red; }
+
+.HardButton-2 {
+  position: absolute; }
+  .HardButton-2__button {
+    background: red; }
+
+.HardButton-3 {
+  position: absolute; }
+  .HardButton-3__button {
+    background: red; }
+
+/*# sourceMappingURL=BonusButton.css.map */

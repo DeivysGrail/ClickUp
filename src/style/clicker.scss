@@ -1,0 +1,112 @@
+@import 'variables';
+
+@font-face {
+
+}
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  font-family: $Poppins;
+}
+
+.overlay {
+  background: transparent;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+}
+
+.MAIN {
+  background: linear-gradient(rgba(241, 171, 66, 1) 0%, rgba(145, 113, 154, 1) 100%);
+  padding: 10px;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  .zone-in {
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+
+  }
+
+  .zoneToKeepSafe {
+    background: $black-metal-light;
+    top: 0;
+    font-size: $fs-16;
+    color: crimson;
+    padding: 3px;
+    border: inset white 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .4);
+    border-radius: $border-radius-lg;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40vw;
+    margin: 0 auto;
+
+    h1 {
+      &::selection {
+        background: transparent;
+      }
+
+    }
+  }
+
+  .deathZone {
+    color: #f1f1F1;
+    background: rgba(30, 30, 30, 0.78);
+    bottom: 0;
+    width: 60vw;
+    left: 50%;
+    transform: translateX(-50%);
+    border: inset $pastel-white-hard 10px;
+    border-bottom: none;
+    border-radius: $border-radius-m;
+
+    h1 {
+
+      &::selection {
+        background: transparent;
+      }
+    }
+
+
+  }
+
+  &__score {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__LOOSE {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    inset: 0;
+    color: crimson;
+    position:absolute;
+    z-index: 300;
+    height: 100vh;
+    background: #1e1e1e;
+    margin: 0 auto;
+&--h1 {
+  text-decoration: underline crimson 10px;
+}
+
+  }
+}

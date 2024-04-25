@@ -1,0 +1,158 @@
+@font-face {
+  src: url("src/assets/Poppins/Poppins-Regular.ttf");
+  font-family: Poppins;
+}
+/*  FontSize   */
+
+$fs-10: 0.625rem;
+$fs-20: 0.75;
+$fs-16: 1rem;
+$fs-18: 1.125rem;
+$fs-20: 1.25rem;
+$fs-24: 1.5rem;
+$fs-28: 1.75rem;
+$fs-30: 1.875;
+$fs-34: 2.125rem;
+$fs-38: 2.375rem;
+$fs-42: 2.625rem;
+$fs-48: 3rem;
+$fs-56: 3.5;
+$fs-62: 3.875;
+$fs-70: 4.735;
+
+/*  Fonts   */
+
+$Poppins: Poppins, sans-serif;
+
+/*  Colors :   */
+
+
+// Red
+$pastel-red-light: #f17982;
+$pastel-red-dark: #bf212f;
+$metal-red: #B30E16;
+$flashy-red: #ff0000;
+$dark-red: #800000;
+
+
+//  Green
+$pastel-green-light: #c0e18c;
+$pastel-green-hard: #19a337;
+$metal-green: #288f40;
+$flashy-green: #00ff00;
+$dark-green: #0a5d00;
+
+
+//  Blue
+$pastel-blue-light: #a8e6cf;
+$pastel-blue-hard: #34528f;
+$metal-blue: #1a2c59;
+$flashy-blue: #0900ff;
+$dark-blue: #03013b;
+
+
+//  Violet
+$pastel-violet-light: #cca2ea;
+$pastel-violet-hard: #622a55;
+$metal-violet: #24084f;
+$flashy-violet: #c70ebc;
+$dark-violet: #4c005a;
+
+
+//  Pink
+$pastel-pink-light: #ea96dc;
+$pastel-pink-hard: #fc3468;
+$metal-pink: #ec74a7;
+$flashy-pink: #ff00ae;
+$dark-pink: #cc0347;
+
+
+//  Yellow
+$pastel-yellow-light: #e8e38b;
+$pastel-yellow-hard: #fbc93d;
+$metal-yellow: #dcb61f;
+$flashy-yellow: #fff800;
+$dark-yellow: #9d9d00;
+
+
+//  Orange
+$pastel-orange-light: #f8c7a6;
+$pastel-orange-hard: #ffb805;
+$metal-orange: #da680f;
+$flashy-orange: #ff7400;
+$dark-orange: #9f4d06;
+
+
+//  Black
+$pastel-black-light: #424242;
+$pastel-black-hard: #242124;
+$black-metal-light: #191f22;
+$black-metal-medium: #0d0c0b;
+$black-metal-hard: #060505;
+
+
+//  White
+$pastel-white-light: #eaeaea;
+$pastel-white-hard: #c2c2c2;
+$white-metal-light: #eeeeee;
+$white-metal-medium: #cccccc;
+$white-metal-hard: #bbbbbb;
+
+
+/*  Border Radius   */
+
+$border-radius-s: .375rem;
+$border-radius-m: .25rem;
+$border-radius-lg: .5rem;
+$border-radius-xl: 1rem;
+$border-radius-xxl: 2rem;
+$border-radius-pill: 50rem;
+
+/*  Borders   */
+
+$solid-red : solid red;
+$solid-green : solid green;
+$solid-blue : solid blue;
+$solid-yellow : solid yellow;
+$solid-orange : solid orange;
+$solid-violet : solid violet;
+$solid-pink : solid pink;
+$solid-black : solid black;
+$solid-white : solid white;
+
+$dotted-red : dotted red;
+$dotted-green : dotted green;
+$dotted-blue : dotted blue;
+$dotted-yellow : dotted yellow;
+$dotted-orange : dotted orange;
+$dotted-violet : dotted violet;
+$dotted-pink : dotted pink;
+$dotted-black : dotted black;
+$dotted-white : dotted white;
+
+$dashed-red : dashed red;
+$dashed-green : dashed green;
+$dashed-blue : dashed blue;
+$dashed-yellow : dashed yellow;
+$dashed-orange : dashed orange;
+$dashed-violet : dashed violet;
+$dashed-pink : dashed pink;
+$dashed-black : dashed black;
+$dashed-white : dashed white;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
