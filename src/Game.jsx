@@ -1,4 +1,3 @@
-// import checkCollision from "./Function/CheckCollision.js";
 import Score from "./components/Score.jsx";
 import './style/clicker.scss'
 import {useEffect, useRef, useState} from "react";
@@ -26,23 +25,10 @@ function Game(props) {
     const [medium, setMedium] = useState(true)
     const [hard, setHard] = useState(false)
 
-    function up(pxl = pixel) {
-        setTranslationY(translationY -= pxl)
-    }
+
 
     // github token
     // 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
-    function saveScore() {
-
-        localStorage.setItem('score', score)
-        if (score > highScore) {
-            setHighScore(localStorage.getItem('score'))
-            localStorage.setItem("score", score)
-        }
-        {
-            localStorage.setItem('score', highScore)
-        }
-    }
 
 
     useEffect(() => {
@@ -56,6 +42,22 @@ function Game(props) {
 
         return () => difficulty()
     }, [score])
+
+    function saveScore() {
+
+        localStorage.setItem('score', score)
+        if (score > highScore) {
+            setHighScore(localStorage.getItem('score'))
+            localStorage.setItem("score", score)
+        }
+        {
+            localStorage.setItem('score', highScore)
+        }
+    }
+
+    function up(pxl = pixel) {
+        setTranslationY(translationY -= pxl)
+    }
 
     function difficulty() {
 
@@ -85,16 +87,13 @@ function Game(props) {
         } else if (score >= 190 && score <= 199) {
             setSpeed(getRandomSpeed(40, 40))
         } else if (score === 200) {
-            // setFallingTrigger(false)
             setInterval(() => {
-                setSpeed(getRandomSpeed(40, 300))
+                setSpeed(getRandomSpeed(80, 300))
             }, 4 * 1000)
-            alert("gagné")
         }
 
 
     }
-
     function down(trigger = fallingTrigger, vitesse = speed) {
 
         if (trigger) {
@@ -107,8 +106,6 @@ function Game(props) {
 
 
     }
-
-
     function checkCollision(safeZone, deathZone) {
 
 
