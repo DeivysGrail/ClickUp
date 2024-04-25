@@ -1,3 +1,4 @@
+// import checkCollision from "./Function/CheckCollision.js";
 import Score from "./components/Score.jsx";
 import './style/clicker.scss'
 import {useEffect, useRef, useState} from "react";
@@ -16,7 +17,7 @@ function Game(props) {
     const DEATH_ZONE_REF = useRef(); // Zone à ne pas atteindre
     let [speed, setSpeed] = useState(getRandomSpeed(400, 500))
     const [pixel, setPixel] = useState(1.2)
-    let [score, setScore] = useState(199)
+    let [score, setScore] = useState(0)
     const [highScore, setHighScore] = useState(localStorage.getItem('score'))
     let [translationY, setTranslationY] = useState(0)
     const [fallingTrigger, setFallingTrigger] = useState(true)
@@ -24,14 +25,20 @@ function Game(props) {
     const [loose, setLoose] = useState(false)
     const [medium, setMedium] = useState(true)
     const [hard, setHard] = useState(false)
-
-
+    const [win, setWin] = useState(false)
 
     // github token
     // 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
 
 
     useEffect(() => {
+        window.addEventListener('keypress', (e) => {
+            if (e.code === "Space") {
+                up()
+                setScore(score++)
+
+            }
+        })
         checkCollision(KEEP_SAFE_ZONE_REF.current, DEATH_ZONE_REF.current)
         const interval = setInterval(down, speed);
         return () => clearInterval(interval);
@@ -86,14 +93,19 @@ function Game(props) {
             setSpeed(getRandomSpeed(200, 210))
         } else if (score >= 190 && score <= 199) {
             setSpeed(getRandomSpeed(40, 40))
-        } else if (score > 200) {
-            setInterval(() => {
-                setSpeed(getRandomSpeed(80, 300))
-            }, 4 * 1000)
+        } else if (score >= 200 && score <= 220) {
+            setSpeed(getRandomSpeed(220, 300))
+        }
+            else if (score >= 221 && score <= 250) {
+                setSpeed(getRandomSpeed(80, 100))
+                setWin(true)
         }
 
 
+
+
     }
+
     function down(trigger = fallingTrigger, vitesse = speed) {
 
         if (trigger) {
@@ -106,6 +118,7 @@ function Game(props) {
 
 
     }
+
     function checkCollision(safeZone, deathZone) {
 
 
@@ -142,6 +155,7 @@ function Game(props) {
         }}>
             <Score score={score}/>
             <h1>Meilleur score : {highScore}</h1>
+            {win && <h1>gg</h1>}
             {<h1>{loose && <Loose score={score} tryAgain={() => location.reload()}/>}</h1>}
             {pause && <p>Pause jusqu'à 120</p>}
             {medium && <MediumBoutonBonus medium1={() => setScore(score += 19)} medium2={() => {
