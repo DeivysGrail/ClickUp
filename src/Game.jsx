@@ -86,7 +86,7 @@ function Game(props) {
             setSpeed(getRandomSpeed(200, 210))
         } else if (score >= 190 && score <= 199) {
             setSpeed(getRandomSpeed(40, 40))
-        } else if (score === 200) {
+        } else if (score > 200) {
             setInterval(() => {
                 setSpeed(getRandomSpeed(80, 300))
             }, 4 * 1000)
