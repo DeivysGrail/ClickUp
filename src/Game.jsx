@@ -134,7 +134,14 @@ function Game(props) {
 
 
     return (<div className={"MAIN"} onClick={() => {
-            up()
+if (loose) {
+return null
+}
+else
+{
+up()
+}
+            
             setScore(score += 1)
         }}>
             <Score score={score}/>
