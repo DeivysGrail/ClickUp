@@ -17,7 +17,7 @@ function Game(props) {
     const DEATH_ZONE_REF = useRef(); // Zone à ne pas atteindre
     let [speed, setSpeed] = useState(getRandomSpeed(400, 500))
     const [pixel, setPixel] = useState(1.2)
-    let [score, setScore] = useState(0)
+    let [score, setScore] = useState(199)
     const [highScore, setHighScore] = useState(localStorage.getItem('score'))
     let [translationY, setTranslationY] = useState(0)
     const [fallingTrigger, setFallingTrigger] = useState(true)
@@ -25,6 +25,7 @@ function Game(props) {
     const [loose, setLoose] = useState(false)
     const [medium, setMedium] = useState(true)
     const [hard, setHard] = useState(false)
+
     function up(pxl = pixel) {
         setTranslationY(translationY -= pxl)
     }
@@ -134,14 +135,12 @@ function Game(props) {
 
 
     return (<div className={"MAIN"} onClick={() => {
-if (loose) {
-return null
-}
-else
-{
-up()
-}
-            
+
+            if (loose) {
+                return null
+            } else {
+                up()
+            }
             setScore(score += 1)
         }}>
             <Score score={score}/>
