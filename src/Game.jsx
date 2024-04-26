@@ -17,7 +17,7 @@ function Game(props) {
     const DEATH_ZONE_REF = useRef(); // Zone à ne pas atteindre
     let [speed, setSpeed] = useState(getRandomSpeed(400, 500))
     const [pixel, setPixel] = useState(1.2)
-    let [score, setScore] = useState(250)
+    let [score, setScore] = useState(0)
     const [highScore, setHighScore] = useState(localStorage.getItem('score'))
     let [translationY, setTranslationY] = useState(0)
     const [fallingTrigger, setFallingTrigger] = useState(true)
