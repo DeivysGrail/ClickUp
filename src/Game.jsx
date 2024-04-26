@@ -17,7 +17,7 @@ function Game(props) {
     const DEATH_ZONE_REF = useRef(); // Zone à ne pas atteindre
     let [speed, setSpeed] = useState(getRandomSpeed(400, 500))
     const [pixel, setPixel] = useState(1.2)
-    let [score, setScore] = useState(0)
+    let [score, setScore] = useState(50)
     const [highScore, setHighScore] = useState(localStorage.getItem('score'))
     let [translationY, setTranslationY] = useState(0)
     const [fallingTrigger, setFallingTrigger] = useState(true)
@@ -72,58 +72,31 @@ function Game(props) {
         if (score <= 2) {
             setSpeed(getRandomSpeed(30, 30))
         } else if (score >= 3 && score <= 20) {
-            const last_interval = setInterval(() => {
-                setSpeed(getRandomSpeed(300, 350))
-                clearInterval(last_interval)
-            }, 2 * 1000)
+            setSpeed(getRandomSpeed(350, 350))
         } else if (score >= 21 && score <= 50) {
-            const last_interval = setInterval(() => {
-                setSpeed(getRandomSpeed(300, 300))
-                setPixel(7)
-                clearInterval(last_interval)
-            }, 1 * 1000)
-        } else if (score >= 51 && score <= 75) {
-            const last_interval = setInterval(() => {
-                setSpeed(getRandomSpeed(80, 90))
-                clearInterval(last_interval)
-            }, 2 * 1000)
-        } else if (score >= 76 && score <= 99) {
-            const last_interval = setInterval(() => {
-                setSpeed(getRandomSpeed(300, 320))
-                clearInterval(last_interval)
-            }, 2 * 1000)
+            setSpeed(getRandomSpeed(300, 300))
+            setPixel(7)
+        } else if (score >= 51 && score <= 55) {
+            setSpeed(getRandomSpeed(20, 10))
+        } else if (score >= 56 && score <= 99) {
+            setSpeed(getRandomSpeed(220, 230))
         } else if (score >= 100 && score <= 120) {
             setFallingTrigger(false)
             setPause(true)
-            setPixel(5)
+            setPixel(2.4)
         } else if (score >= 121 && score <= 129) {
             setFallingTrigger(true)
-            const last_interval = setInterval(() => {
-                setSpeed(getRandomSpeed(70, 90))
-                clearInterval(last_interval)
-            }, 3 * 100)
-            setPixel(1.4)
+            setSpeed(getRandomSpeed(70, 90))
+            setPixel(1.2)
             setPause(false)
         } else if (score >= 130 && score <= 189) {
-            const last_interval = setInterval(() => {
-                setSpeed(getRandomSpeed(200, 210))
-                clearInterval(last_interval)
-            }, 4 * 1000)
+            setSpeed(getRandomSpeed(200, 210))
         } else if (score >= 190 && score <= 199) {
-            const last_interval = setInterval(() => {
-                setSpeed(getRandomSpeed(40, 50))
-                clearInterval(last_interval)
-            }, .6 * 1000)
+            setSpeed(getRandomSpeed(40, 40))
         } else if (score >= 200 && score <= 220) {
-            const last_interval = setInterval(() => {
-                setSpeed(getRandomSpeed(200, 310))
-                clearInterval(last_interval)
-            }, 1 * 1000)
+            setSpeed(getRandomSpeed(200, 310))
         } else if (score >= 221 && score <= 250) {
-            const last_interval = setInterval(() => {
-                setSpeed(getRandomSpeed(80, 100))
-                clearInterval(last_interval)
-            }, 2 * 1000)
+            setSpeed(getRandomSpeed(80, 100))
             setWin(true)
         } else if (score >= 250 && score <= 300) {
             const last_interval = setInterval(() => {
