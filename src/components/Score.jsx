@@ -1,9 +1,9 @@
 function Score(props) {
 
 
-    return (<div className={'MAIN__score'}>
-        <h1 className={"MAIN__score--h1"}>{props.score}</h1>
-        <h2 className={"MAIN__score--h2"}>{props.highScore}</h2>
+    return (<div className={'MAIN__SCORE'}>
+        <h2 className={"MAIN__SCORE--highScore"}>{props.highScore}</h2>
+        <h1 className={"MAIN__SCORE--score"}>{props.score}</h1>
     </div>);
 }
 
