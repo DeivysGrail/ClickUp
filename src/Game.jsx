@@ -97,12 +97,14 @@ function Game(props) {
         } else if (score >= 221 && score <= 250) {
             setSpeed(getRandomSpeed(80, 100))
             setWin(true)
+            setPixel(1.8)
         } else if (score >= 250 && score <= 300) {
             const last_interval = setInterval(() => {
                 setSpeed(getRandomSpeed(60, 280))
                 clearInterval(last_interval)
             }, 1 * 1000)
         } else if (score >= 301 && score <= 320) {
+            setPixel(1.5)
             const last_interval = setInterval(() => {
                 setSpeed(getRandomSpeed(100, 200))
                 clearInterval(last_interval)
@@ -118,10 +120,11 @@ function Game(props) {
                 clearInterval(last_interval)
             }, 3 * 1000)
         } else if (score >= 401) {
+            setPixel(1.4)
             const last_interval = setInterval(() => {
                 setSpeed(getRandomSpeed(60, 140))
                 clearInterval(last_interval)
-            }, 4 * 1000)
+            }, 3 * 1000)
         }
 
 
