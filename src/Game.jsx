@@ -95,13 +95,16 @@ function Game(props) {
             setSpeed(getRandomSpeed(40, 40))
         } else if (score >= 200 && score <= 220) {
             setSpeed(getRandomSpeed(220, 300))
+        } else if (score >= 221 && score <= 250) {
+            setSpeed(getRandomSpeed(80, 100))
+            setWin(true)
+        } else if (score >= 250) {
+            const last_interval = setInterval(() => {
+                console.log(speed)
+                setSpeed(getRandomSpeed(70, 300))
+                clearInterval(last_interval)
+            }, 2 * 100)
         }
-            else if (score >= 221 && score <= 250) {
-                setSpeed(getRandomSpeed(80, 100))
-                setWin(true)
-        }
-
-
 
 
     }
@@ -124,7 +127,10 @@ function Game(props) {
 
         const keepSafeRect = safeZone.getBoundingClientRect();
         const deathZoneRect = deathZone.getBoundingClientRect();
-
+        if (keepSafeRect.top < 0) {
+            setTranslationY(200)
+            // KEEP_SAFE_ZONE_REF.current.style.transition = "all .4s ease-out"
+        }
         if (keepSafeRect.bottom >= deathZoneRect.top) {
             // La div KEEP_SAFE a atteint ou dépassé la div DEATH_ZONE
             // Vous pouvez exécuter votre fonction ici
@@ -153,10 +159,9 @@ function Game(props) {
             }
             setScore(score += 1)
         }}>
-            <Score score={score}/>
-            <h1>Meilleur score : {highScore}</h1>
+            <Score score={score} highScore={highScore}/>
             {win && <h1>gg</h1>}
-            {<h1>{loose && <Loose score={score} tryAgain={() => location.reload()}/>}</h1>}
+            {<h1>{loose && <Loose score={score} highScore={highScore} tryAgain={() => location.reload()}/>}</h1>}
             {pause && <p>Pause jusqu'à 120</p>}
             {medium && <MediumBoutonBonus medium1={() => setScore(score += 19)} medium2={() => {
                 setFallingTrigger(false)
