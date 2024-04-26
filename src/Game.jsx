@@ -17,7 +17,7 @@ function Game(props) {
     const DEATH_ZONE_REF = useRef(); // Zone à ne pas atteindre
     let [speed, setSpeed] = useState(getRandomSpeed(400, 500))
     const [pixel, setPixel] = useState(1.2)
-    let [score, setScore] = useState(50)
+    let [score, setScore] = useState(250)
     const [highScore, setHighScore] = useState(localStorage.getItem('score'))
     let [translationY, setTranslationY] = useState(0)
     const [fallingTrigger, setFallingTrigger] = useState(true)
@@ -92,7 +92,7 @@ function Game(props) {
         } else if (score >= 130 && score <= 189) {
             setSpeed(getRandomSpeed(200, 210))
         } else if (score >= 190 && score <= 199) {
-            setSpeed(getRandomSpeed(40, 40))
+            setSpeed(getRandomSpeed(30, 40))
         } else if (score >= 200 && score <= 220) {
             setSpeed(getRandomSpeed(200, 310))
         } else if (score >= 221 && score <= 250) {
