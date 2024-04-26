@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import '../style/BonusButton.scss'
+import '../style/clicker.scss'
 function HardBoutonBonus(props) {
 
 
@@ -21,8 +21,8 @@ function HardBoutonBonus(props) {
 
     })
     const [ready, setReady] = useState(false)
-    const [left, setLeft] = useState(Math.round((Math.random() * 100) ))
-    const [top, setTop] = useState(Math.round((Math.random() * 100) ))
+    const [left, setLeft] = useState(Math.round((Math.random() * 80) ))
+    const [top, setTop] = useState(Math.round((Math.random() * 80) ))
 
     function boxReady() {
         setReady(true)
@@ -41,19 +41,19 @@ function HardBoutonBonus(props) {
 
 
 
-    const HARD_BUTTON_1 = <div onClick={props.easy1} className={"HardButton-1"} style={{left: `${left}vw`, top: `${top}vh`}}>
+    const HARD_BUTTON_1 = <div onClick={props.easy1} className={"HardButton-1"} style={{left: `${left}%`, top: `${top}%`}}>
         <button className="HardButton-1__button"
                 onClick={() => setReady(false)}>+ 10
         </button>
     </div>
 
-    const HARD_BUTTON_2 = <div onClick={props.easy2} className={"HardButton-2"} style={{left: `${left}vw`, top: `${top}vh`}}>
+    const HARD_BUTTON_2 = <div onClick={props.easy2} className={"HardButton-2"} style={{left: `${left}%`, top: `${top}%`}}>
         <button className="HardButton-2__button"
                 onClick={() => setReady(false)}>Stop 3s
         </button>
     </div>
 
-    const HARD_BUTTON_3 = <div onClick={props.easy3} className={"HardButton-3"} style={{left: `${left}vw`, top: `${top}vh`}}>
+    const HARD_BUTTON_3 = <div onClick={props.easy3} className={"HardButton-3"} style={{left: `${left}%`, top: `${top}%`}}>
         <button className="HardButton-3__button"
                 onClick={() => setReady(false)}>+ 5px
         </button>
@@ -63,7 +63,7 @@ function HardBoutonBonus(props) {
 
 
     return (
-        <div>
+        <div className={"MAIN__HARD_BUTTON"}>
             {(ready && triggerBox === 1) && MEDIUM_BUTTON_1}
             {(ready && triggerBox === 2) && MEDIUM_BUTTON_2}
             {(ready && triggerBox === 3) && MEDIUM_BUTTON_3}
