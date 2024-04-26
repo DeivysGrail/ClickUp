@@ -72,62 +72,84 @@ function Game(props) {
         if (score <= 2) {
             setSpeed(getRandomSpeed(30, 30))
         } else if (score >= 3 && score <= 20) {
-            setSpeed(getRandomSpeed(350, 350))
+            const last_interval = setInterval(() => {
+                setSpeed(getRandomSpeed(300, 350))
+                clearInterval(last_interval)
+            }, 2 * 1000)
         } else if (score >= 21 && score <= 50) {
-            setSpeed(getRandomSpeed(300, 300))
-            setPixel(7)
+            const last_interval = setInterval(() => {
+                setSpeed(getRandomSpeed(300, 300))
+                setPixel(7)
+                clearInterval(last_interval)
+            }, 1 * 1000)
         } else if (score >= 51 && score <= 75) {
-            setSpeed(getRandomSpeed(70, 80))
+            const last_interval = setInterval(() => {
+                setSpeed(getRandomSpeed(80, 90))
+                clearInterval(last_interval)
+            }, 2 * 1000)
         } else if (score >= 76 && score <= 99) {
-            setSpeed(getRandomSpeed(300, 320))
+            const last_interval = setInterval(() => {
+                setSpeed(getRandomSpeed(300, 320))
+                clearInterval(last_interval)
+            }, 2 * 1000)
         } else if (score >= 100 && score <= 120) {
             setFallingTrigger(false)
             setPause(true)
-            setPixel(2.4)
+            setPixel(5)
         } else if (score >= 121 && score <= 129) {
             setFallingTrigger(true)
-            setSpeed(getRandomSpeed(70, 90))
-            setPixel(1.2)
+            const last_interval = setInterval(() => {
+                setSpeed(getRandomSpeed(70, 90))
+                clearInterval(last_interval)
+            }, 3 * 100)
+            setPixel(1.4)
             setPause(false)
         } else if (score >= 130 && score <= 189) {
-            setSpeed(getRandomSpeed(200, 210))
+            const last_interval = setInterval(() => {
+                setSpeed(getRandomSpeed(200, 210))
+                clearInterval(last_interval)
+            }, 4 * 1000)
         } else if (score >= 190 && score <= 199) {
-            setSpeed(getRandomSpeed(40, 40))
+            const last_interval = setInterval(() => {
+                setSpeed(getRandomSpeed(40, 50))
+                clearInterval(last_interval)
+            }, .6 * 1000)
         } else if (score >= 200 && score <= 220) {
-            setSpeed(getRandomSpeed(220, 300))
+            const last_interval = setInterval(() => {
+                setSpeed(getRandomSpeed(200, 310))
+                clearInterval(last_interval)
+            }, 1 * 1000)
         } else if (score >= 221 && score <= 250) {
-            setSpeed(getRandomSpeed(80, 100))
+            const last_interval = setInterval(() => {
+                setSpeed(getRandomSpeed(80, 100))
+                clearInterval(last_interval)
+            }, 2 * 1000)
             setWin(true)
-        }
-        else if (score >= 250 && score <= 300) {
+        } else if (score >= 250 && score <= 300) {
             const last_interval = setInterval(() => {
                 setSpeed(getRandomSpeed(60, 280))
                 clearInterval(last_interval)
             }, 1 * 1000)
-        }
-        else if (score >= 301 && score <= 320) {
+        } else if (score >= 301 && score <= 320) {
             const last_interval = setInterval(() => {
                 setSpeed(getRandomSpeed(100, 200))
                 clearInterval(last_interval)
-            }, 5 * 100)
-        }
-        else if (score >= 321 && score <= 371) {
+            }, 4 * 100)
+        } else if (score >= 321 && score <= 371) {
             const last_interval = setInterval(() => {
-                setSpeed(getRandomSpeed(50, 290))
+                setSpeed(getRandomSpeed(50, 150))
                 clearInterval(last_interval)
             }, 2.2 * 1000)
-        }
-        else if (score >= 372 && score <= 400) {
+        } else if (score >= 372 && score <= 400) {
             const last_interval = setInterval(() => {
-                setSpeed(getRandomSpeed(80, 250))
+                setSpeed(getRandomSpeed(100, 200))
                 clearInterval(last_interval)
-            }, 1.4 * 1000)
-        }
-        else if (score >= 401) {
+            }, 3 * 1000)
+        } else if (score >= 401) {
             const last_interval = setInterval(() => {
-                setSpeed(getRandomSpeed(30, 180))
+                setSpeed(getRandomSpeed(50, 120))
                 clearInterval(last_interval)
-            }, .7 * 1000)
+            }, 5 * 1000)
         }
 
 
