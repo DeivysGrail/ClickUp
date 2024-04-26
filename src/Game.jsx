@@ -1,4 +1,3 @@
-// import checkCollision from "./Function/CheckCollision.js";
 import Score from "./components/Score.jsx";
 import './style/clicker.scss'
 import {useEffect, useRef, useState} from "react";
@@ -20,7 +19,7 @@ function Game(props) {
     let [score, setScore] = useState(0)
     const [highScore, setHighScore] = useState(localStorage.getItem('score'))
     let [translationY, setTranslationY] = useState(0)
-    const [fallingTrigger, setFallingTrigger] = useState(true)
+    const [fallingTrigger, setFallingTrigger] = useState(false)
     const [pause, setPause] = useState(false)
     const [loose, setLoose] = useState(false)
     const [medium, setMedium] = useState(true)
@@ -120,9 +119,9 @@ function Game(props) {
             }, 3 * 1000)
         } else if (score >= 401) {
             const last_interval = setInterval(() => {
-                setSpeed(getRandomSpeed(50, 120))
+                setSpeed(getRandomSpeed(60, 140))
                 clearInterval(last_interval)
-            }, 5 * 1000)
+            }, 4 * 1000)
         }
 
 
