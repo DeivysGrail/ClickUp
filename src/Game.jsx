@@ -19,7 +19,7 @@ function Game(props) {
     let [score, setScore] = useState(0)
     const [highScore, setHighScore] = useState(localStorage.getItem('score'))
     let [translationY, setTranslationY] = useState(0)
-    const [fallingTrigger, setFallingTrigger] = useState(false)
+    const [fallingTrigger, setFallingTrigger] = useState(true)
     const [pause, setPause] = useState(false)
     const [loose, setLoose] = useState(false)
     const [medium, setMedium] = useState(true)
