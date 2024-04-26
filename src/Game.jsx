@@ -98,12 +98,36 @@ function Game(props) {
         } else if (score >= 221 && score <= 250) {
             setSpeed(getRandomSpeed(80, 100))
             setWin(true)
-        } else if (score >= 250) {
+        }
+        else if (score >= 250 && score <= 300) {
             const last_interval = setInterval(() => {
-                console.log(speed)
-                setSpeed(getRandomSpeed(70, 300))
+                setSpeed(getRandomSpeed(60, 280))
                 clearInterval(last_interval)
-            }, 2 * 100)
+            }, 1 * 1000)
+        }
+        else if (score >= 301 && score <= 320) {
+            const last_interval = setInterval(() => {
+                setSpeed(getRandomSpeed(100, 200))
+                clearInterval(last_interval)
+            }, 5 * 100)
+        }
+        else if (score >= 321 && score <= 371) {
+            const last_interval = setInterval(() => {
+                setSpeed(getRandomSpeed(50, 290))
+                clearInterval(last_interval)
+            }, 2.2 * 1000)
+        }
+        else if (score >= 372 && score <= 400) {
+            const last_interval = setInterval(() => {
+                setSpeed(getRandomSpeed(80, 250))
+                clearInterval(last_interval)
+            }, 1.4 * 1000)
+        }
+        else if (score >= 401) {
+            const last_interval = setInterval(() => {
+                setSpeed(getRandomSpeed(30, 180))
+                clearInterval(last_interval)
+            }, .7 * 1000)
         }
 
 
@@ -129,7 +153,6 @@ function Game(props) {
         const deathZoneRect = deathZone.getBoundingClientRect();
         if (keepSafeRect.top < 0) {
             setTranslationY(200)
-            // KEEP_SAFE_ZONE_REF.current.style.transition = "all .4s ease-out"
         }
         if (keepSafeRect.bottom >= deathZoneRect.top) {
             // La div KEEP_SAFE a atteint ou dépassé la div DEATH_ZONE
