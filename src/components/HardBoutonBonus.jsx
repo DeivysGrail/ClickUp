@@ -29,33 +29,33 @@ function HardBoutonBonus(props) {
         setTriggerBox(Math.round(getRandomNumber(1, 3)))
         setLeft(Math.round((Math.random() * 100) ))
         setTop(Math.round((Math.random() * 100) ))
-        setTimeout(() => setReady(false), 10 * 1000)
+        setTimeout(() => setReady(false), 1.1 * 1000)
     }
 
 
     useEffect(() => {
-        const interval = setInterval(boxReady, 3 * 1000)
+        const interval = setInterval(boxReady, 8.2 * 1000)
         return () => clearInterval(interval)
 
     }, [triggerBox])
 
 
 
-    const HARD_BUTTON_1 = <div onClick={props.easy1} className={"HardButton-1"} style={{left: `${left}%`, top: `${top}%`}}>
+    const HARD_BUTTON_1 = <div onClick={props.hard1} className={"HardButton-1"} style={{left: `${left}%`, top: `${top}%`}}>
         <button className="HardButton-1__button"
-                onClick={() => setReady(false)}>+ 10
+                onClick={() => setReady(false)}>
         </button>
     </div>
 
-    const HARD_BUTTON_2 = <div onClick={props.easy2} className={"HardButton-2"} style={{left: `${left}%`, top: `${top}%`}}>
+    const HARD_BUTTON_2 = <div onClick={props.hard2} className={"HardButton-2"} style={{left: `${left}%`, top: `${top}%`}}>
         <button className="HardButton-2__button"
-                onClick={() => setReady(false)}>Stop 3s
+                onClick={() => setReady(false)}>
         </button>
     </div>
 
-    const HARD_BUTTON_3 = <div onClick={props.easy3} className={"HardButton-3"} style={{left: `${left}%`, top: `${top}%`}}>
+    const HARD_BUTTON_3 = <div onClick={props.hard3} className={"HardButton-3"} style={{left: `${left}%`, top: `${top}%`}}>
         <button className="HardButton-3__button"
-                onClick={() => setReady(false)}>+ 5px
+                onClick={() => setReady(false)}>
         </button>
     </div>
 
@@ -64,9 +64,9 @@ function HardBoutonBonus(props) {
 
     return (
         <div className={"MAIN__HARD_BUTTON"}>
-            {(ready && triggerBox === 1) && MEDIUM_BUTTON_1}
-            {(ready && triggerBox === 2) && MEDIUM_BUTTON_2}
-            {(ready && triggerBox === 3) && MEDIUM_BUTTON_3}
+            {(ready && triggerBox === 1) && HARD_BUTTON_1}
+            {(ready && triggerBox === 2) && HARD_BUTTON_2}
+            {(ready && triggerBox === 3) && HARD_BUTTON_3}
         </div>
     );
 }
