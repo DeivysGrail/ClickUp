@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import "../style/clicker.scss"
+
+
 function EasyBoutonBonus(props) {
     function getRandomNumber(min, max) {
 
@@ -16,20 +18,19 @@ function EasyBoutonBonus(props) {
         return Math.round(getRandomNumber(1, 2))
 
     })
-
-    const [ready, setReady] = useState(true)
-    const [left, setLeft] = useState(Math.round((Math.random() * 80) ))
-    const [top, setTop] = useState(Math.round((Math.random() * 80) ))
+    const [ready, setReady] = useState(false)
+    const [left, setLeft] = useState(Math.round((Math.random() * 80)))
+    const [top, setTop] = useState(Math.round((Math.random() * 80)))
 
     function boxReady() {
         setReady(true)
         setTriggerBox(Math.round(getRandomNumber(1, 3)))
-        setLeft(Math.round((Math.random() * 100) ))
-        setTop(Math.round((Math.random() * 100) ))
+        setLeft(Math.round((Math.random() * 100)))
+        setTop(Math.round((Math.random() * 100)))
         setTimeout(() => setReady(false), 3 * 1000)
     }
 
-
+    //
     useEffect(() => {
         const interval = setInterval(boxReady, 3 * 1000)
         return () => clearInterval(interval)
@@ -37,21 +38,24 @@ function EasyBoutonBonus(props) {
     }, [triggerBox])
 
 
-    const EASY_BUTTON_1 = <div onClick={props.easy1} className={"MAIN__EASY_BUTTON--EasyButton-1 EasyButton-1"} style={{left: `${left}%`, top: `${top}%`}}>
+    const EASY_BUTTON_1 = <div onClick={props.easy1} className={"MAIN__EASY_BUTTON--EasyButton-1 EasyButton-1"}
+                               style={{left: `${left}%`, top: `${top}%`}}>
         <button className="EasyButton-1__button"
-                onClick={() => setReady(false)}>+ 10pt
+                onClick={() => setReady(false)}>
         </button>
     </div>
 
-    const EASY_BUTTON_2 = <div onClick={props.easy2} className={"MAIN__EASY_BUTTON--EasyButton-2  EasyButton-2"} style={{left: `${left}%`, top: `${top}%`}}>
+    const EASY_BUTTON_2 = <div onClick={props.easy2} className={"MAIN__EASY_BUTTON--EasyButton-2  EasyButton-2"}
+                               style={{left: `${left}%`, top: `${top}%`}}>
         <button className="EasyButton-2__button"
-                onClick={() => setReady(false)}>Stop 3s
+                onClick={() => setReady(false)}>
         </button>
     </div>
 
-    const EASY_BUTTON_3 = <div onClick={props.easy3} className={"MAIN__EASY_BUTTON--EasyButton-3  EasyButton-3"} style={{left: `${left}%`, top: `${top}%`}}>
+    const EASY_BUTTON_3 = <div onClick={props.easy3} className={"MAIN__EASY_BUTTON--EasyButton-3  EasyButton-3"}
+                               style={{left: `${left}%`, top: `${top}%`}}>
         <button className="EasyButton-3__button"
-                onClick={() => setReady(false)}>⬆ 5px
+                onClick={() => setReady(false)}>
         </button>
     </div>
 
