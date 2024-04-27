@@ -180,7 +180,6 @@ function Game(props) {
             setScore(score += 1)
         }}>
             <Score score={score} highScore={highScore}/>
-            {win && <h1>gg</h1>}
             {<h1>{loose && <Loose score={score} highScore={highScore} tryAgain={() => location.reload()}/>}</h1>}
             {pause && <p>Pause jusqu'à 120</p>}
             {medium && <MediumBoutonBonus medium1={() => setScore(score += 19)} medium2={() => {
