@@ -12,23 +12,54 @@
 }
 
 body {
-  background: linear-gradient(rgba(241, 171, 66, 1) 0%, rgba(145, 113, 154, 1) 100%);
+  background: radial-gradient(circle, rgba(132, 222, 133, 1) 0%, rgba(35, 36, 36, 1) 100%);
   height: 100vh;
   padding: 0 30px 10px 30px;
   overflow: hidden;
   font-family: $Poppins;
 }
 
-.overlay {
-  background: transparent;
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  z-index: 20;
+.INSTRUCTIONS {
+  text-align: center;
+  background: red;
+  width: 50%;
+  margin: 0 auto;
+
+  &__header {
+
+    &--title {
+
+    }
+
+    &--logo {
+
+    }
+
+
+  }
+
+  &__bonus {
+
+    &__BONUS_CONTAINER {
+    }
+
+    &__StopTime {
+    }
+
+    &__PixelUp {
+    }
+
+    &__BonusPoint {
+    }
+
+
+  }
+
 }
 
 .MAIN {
   height: 100vh;
+  overflow: hidden;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -73,10 +104,13 @@ body {
 
   .deathZone {
     color: #f1f1F1;
-    background-image: linear-gradient(67.5deg, rgb(235, 73, 66) 0%, rgb(235, 73, 66) 14%,rgb(197, 76, 57) 14%, rgb(197, 76, 57) 36%,rgb(159, 78, 48) 36%, rgb(159, 78, 48) 42%,rgb(121, 81, 39) 42%, rgb(121, 81, 39) 45%,rgb(83, 84, 29) 45%, rgb(83, 84, 29) 79%,rgb(45, 86, 20) 79%, rgb(45, 86, 20) 83%,rgb(7, 89, 11) 83%, rgb(7, 89, 11) 100%),linear-gradient(112.5deg, rgb(235, 73, 66) 0%, rgb(235, 73, 66) 14%,rgb(197, 76, 57) 14%, rgb(197, 76, 57) 36%,rgb(159, 78, 48) 36%, rgb(159, 78, 48) 42%,rgb(121, 81, 39) 42%, rgb(121, 81, 39) 45%,rgb(83, 84, 29) 45%, rgb(83, 84, 29) 79%,rgb(45, 86, 20) 79%, rgb(45, 86, 20) 83%,rgb(7, 89, 11) 83%, rgb(7, 89, 11) 100%),linear-gradient(22.5deg, rgb(235, 73, 66) 0%, rgb(235, 73, 66) 14%,rgb(197, 76, 57) 14%, rgb(197, 76, 57) 36%,rgb(159, 78, 48) 36%, rgb(159, 78, 48) 42%,rgb(121, 81, 39) 42%, rgb(121, 81, 39) 45%,rgb(83, 84, 29) 45%, rgb(83, 84, 29) 79%,rgb(45, 86, 20) 79%, rgb(45, 86, 20) 83%,rgb(7, 89, 11) 83%, rgb(7, 89, 11) 100%),linear-gradient(301deg, rgb(235, 73, 66) 0%, rgb(235, 73, 66) 14%,rgb(197, 76, 57) 14%, rgb(197, 76, 57) 36%,rgb(159, 78, 48) 36%, rgb(159, 78, 48) 42%,rgb(121, 81, 39) 42%, rgb(121, 81, 39) 45%,rgb(83, 84, 29) 45%, rgb(83, 84, 29) 79%,rgb(45, 86, 20) 79%, rgb(45, 86, 20) 83%,rgb(7, 89, 11) 83%, rgb(7, 89, 11) 100%),linear-gradient(301deg, rgb(169, 5, 29),rgb(51, 13, 59)); background-blend-mode:overlay,overlay,overlay,overlay,normal;    bottom: 0;
+    background-image: linear-gradient(67.5deg, rgb(235, 73, 66) 0%, rgb(235, 73, 66) 14%, rgb(197, 76, 57) 14%, rgb(197, 76, 57) 36%, rgb(159, 78, 48) 36%, rgb(159, 78, 48) 42%, rgb(121, 81, 39) 42%, rgb(121, 81, 39) 45%, rgb(83, 84, 29) 45%, rgb(83, 84, 29) 79%, rgb(45, 86, 20) 79%, rgb(45, 86, 20) 83%, rgb(7, 89, 11) 83%, rgb(7, 89, 11) 100%), linear-gradient(112.5deg, rgb(235, 73, 66) 0%, rgb(235, 73, 66) 14%, rgb(197, 76, 57) 14%, rgb(197, 76, 57) 36%, rgb(159, 78, 48) 36%, rgb(159, 78, 48) 42%, rgb(121, 81, 39) 42%, rgb(121, 81, 39) 45%, rgb(83, 84, 29) 45%, rgb(83, 84, 29) 79%, rgb(45, 86, 20) 79%, rgb(45, 86, 20) 83%, rgb(7, 89, 11) 83%, rgb(7, 89, 11) 100%), linear-gradient(22.5deg, rgb(235, 73, 66) 0%, rgb(235, 73, 66) 14%, rgb(197, 76, 57) 14%, rgb(197, 76, 57) 36%, rgb(159, 78, 48) 36%, rgb(159, 78, 48) 42%, rgb(121, 81, 39) 42%, rgb(121, 81, 39) 45%, rgb(83, 84, 29) 45%, rgb(83, 84, 29) 79%, rgb(45, 86, 20) 79%, rgb(45, 86, 20) 83%, rgb(7, 89, 11) 83%, rgb(7, 89, 11) 100%), linear-gradient(301deg, rgb(235, 73, 66) 0%, rgb(235, 73, 66) 14%, rgb(197, 76, 57) 14%, rgb(197, 76, 57) 36%, rgb(159, 78, 48) 36%, rgb(159, 78, 48) 42%, rgb(121, 81, 39) 42%, rgb(121, 81, 39) 45%, rgb(83, 84, 29) 45%, rgb(83, 84, 29) 79%, rgb(45, 86, 20) 79%, rgb(45, 86, 20) 83%, rgb(7, 89, 11) 83%, rgb(7, 89, 11) 100%), linear-gradient(301deg, rgb(169, 5, 29), rgb(51, 13, 59));
+    background-blend-mode: overlay, overlay, overlay, overlay, normal;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     border-radius: $border-radius-m;
+
     h1 {
 
       &::selection {
@@ -89,26 +123,25 @@ body {
 
   &__EASY_BUTTON {
     height: 90%;
-    width: 100%;
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%);
     position: relative;
+    z-index: 1;
     margin: 0 auto;
+
     .EasyButton-1 {
       position: absolute;
 
-
       &__button {
-        width: 60px;
-        height: 60px;
-        padding: 5px;
-        border-radius: $border-radius-pill;
-        font-weight: bolder;
-        font-size: .9rem;
-        background: linear-gradient(99deg, rgba(120, 232, 122, 1) 0%, rgba(217, 155, 203, 1) 100%);
-        transform: scale(1);
         position: relative;
-        z-index: 100;
-
-
+        width: 100px;
+        border-radius: 100%;
+        height: 100px;
+        background: url("../assets/bonus_ico/10pt_large.png");
+        background-size: cover;
+        clip-path: circle(50%);
+        border: none;
       }
     }
 
@@ -116,18 +149,14 @@ body {
       position: absolute;
 
       &__button {
-        width: max-content;
-        height: 40px;
-        color: #f1f1F1;
-        padding: 3px 5px;
-        border-radius: $border-radius-lg;
-        font-weight: bold;
-        font-size: .9rem;
-        background: linear-gradient(20deg, rgb(154, 24, 40) 0%, rgb(16, 153, 203) 100%);
-        transform: scale(1);
         position: relative;
-        z-index: 100;
-
+        width: 100px;
+        border-radius: 100%;
+        height: 100px;
+        background: url("../assets/bonus_ico/3s_large.png");
+        background-size: cover;
+        clip-path: circle(50%);
+        border: none;
 
       }
 
@@ -138,132 +167,124 @@ body {
       position: absolute;
 
       &__button {
-        width: 60px;
-        height: 60px;
-        padding: 5px;
-        border-radius: $border-radius-pill;
-        font-weight: bold;
-        font-size: .9rem;
-        background: linear-gradient(99deg, rgba(120, 232, 122, 1) 0%, rgba(217, 155, 203, 1) 100%);
         position: relative;
-        z-index: 100;
-        transform: scale(1);
+        width: 70px;
+        border-radius: 100%;
+        height: 60px;
+        background: url("../assets/bonus_ico/5px_large.png") no-repeat;
+        background-size: contain;
+        clip-path: circle(50%);
+        border: none;
 
       }
 
     }
-
-
 
 
   }
 
   &__MEDIUM_BUTTON {
-    height: 40%;
-    width: 100%;
+    height: 90%;
+    width: 90%;
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%);
     position: relative;
     margin: 0 auto;
 
     .MediumButton-1 {
       position: absolute;
-      z-index: 100;
-      &__button {
-        height: 50px;
-        width: 50px;
-        text-align: center;
-        padding: 3px;
-        font-weight: bold;
-        font-size: .8rem;
-        color: $black-metal-light;
-        border-radius: $border-radius-pill  ;
-        border: solid white 3px;
-        background: linear-gradient(99deg, rgba(120, 232, 122, 1) 0%, rgba(217, 155, 203, 1) 100%);
 
+      &__button {
+        position: relative;
+        width: 100px;
+        border-radius: 100%;
+        height: 100px;
+        background: url("../assets/bonus_ico/20pt_large.png");
+        background-size: cover;
+        clip-path: circle(50%);
+        border: none;
       }
     }
 
     .MediumButton-2 {
       position: absolute;
-      z-index: 100;
-
 
       &__button {
-        height: 30px;
-        width: max-content;
-        padding: 3px;
-        font-weight: bold;
-        font-size: .9rem;
-        color: $white-metal-light;
-        border-radius: 5px;
-        border: solid white .1px;
-        background: linear-gradient(99deg, rgb(21, 98, 112) 0%, rgb(105, 23, 86) 100%);
+        position: relative;
+        width: 100px;
+        border-radius: 100%;
+        height: 100px;
+        background: url("../assets/bonus_ico/5s_large.png");
+        background-size: cover;
+        clip-path: circle(50%);
+        border: none;
+
 
       }
+
+
     }
 
     .MediumButton-3 {
       position: absolute;
-      z-index: 100;
 
       &__button {
-        height: 50px;
-        width: 50px;
-        padding: 1px;
-        font-weight: bold;
-        font-size: .7rem;
-        color: $black-metal-light;
-        border: inset black 3px;
-        border-radius: $border-radius-pill;
-        background: linear-gradient(99deg, rgb(225, 196, 7) 0%, rgb(121, 215, 107) 100%);
+        position: relative;
+        width: 90px;
+        border-radius: 100%;
+        height: 80px;
+        background: url("../assets/bonus_ico/10px_large.png") no-repeat;
+        background-size: contain;
+        clip-path: circle(50%);
+        border: none;
+
+
 
       }
+
     }
-
-
 
 
   }
 
+
   &__HARD_BUTTON {
     height: 90%;
-    width: 100%;
+    width: 90%;
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%);
     position: relative;
     margin: 0 auto;
-    .EasyButton-1 {
+
+    .HardButton-1 {
       position: absolute;
 
-
       &__button {
+        position: relative;
         width: 60px;
+        border-radius: 100%;
         height: 60px;
-        padding: 5px;
-        border-radius: $border-radius-pill;
-        font-weight: bolder;
-        font-size: .9rem;
-        background: linear-gradient(99deg, rgba(120, 232, 122, 1) 0%, rgba(217, 155, 203, 1) 100%);
-        transform: scale(1);
-        position: relative;
-        z-index: 100;
-
-
+        background: url("../assets/bonus_ico/30pt_large.png");
+        background-size: cover;
+        clip-path: circle(50%);
+        border: none;
       }
     }
 
-    .EasyButton-2 {
+    .HardButton-2 {
       position: absolute;
 
       &__button {
-        width: max-content;
-        height: 40px;
-        color: #f1f1F1;
-        padding: 3px 5px;
-        border-radius: $border-radius-lg;
-        font-weight: bold;
-        font-size: .9rem;
-        background: linear-gradient(20deg, rgb(154, 24, 40) 0%, rgb(16, 153, 203) 100%);
-        transform: scale(1);
         position: relative;
-        z-index: 100;
+        width: 50px;
+        border-radius: 100%;
+        height: 50px;
+        background: url("../assets/bonus_ico/8s_large.png");
+        background-size: cover;
+        clip-path: circle(50%);
+        border: none;
 
 
       }
@@ -271,26 +292,24 @@ body {
 
     }
 
-    .EasyButton-3 {
+    .HardButton-3 {
       position: absolute;
 
       &__button {
-        width: 60px;
-        height: 60px;
-        padding: 5px;
-        border-radius: $border-radius-pill;
-        font-weight: bold;
-        font-size: .9rem;
-        background: linear-gradient(99deg, rgba(120, 232, 122, 1) 0%, rgba(217, 155, 203, 1) 100%);
         position: relative;
-        z-index: 100;
-        transform: scale(1);
+        width: 70px;
+        border-radius: 100%;
+        height: 60px;
+        background: url("../assets/bonus_ico/20px_large.png") no-repeat;
+        background-size: contain;
+        clip-path: circle(50%);
+        border: none;
+
+
 
       }
 
     }
-
-
 
 
   }
@@ -298,13 +317,13 @@ body {
 
   &__SCORE {
     position: relative;
-    z-index: 10;
 
     &--score {
     }
 
     &--highScore {
-      font-size: 1rem;    }
+      font-size: 1rem;
+    }
 
   }
 
@@ -325,14 +344,16 @@ body {
 
     &--text {
       text-decoration: underline crimson 10px;
-  }
+    }
 
     &--score {
 
-    @media screen and (max-width: 500px ) {
-      font-size: 1.8rem ;
-    }
-    &--highScore {}
+      @media screen and (max-width: 500px) {
+        font-size: 1.6rem;
+      }
+
+      &--highScore {
+      }
 
     }
 
@@ -348,4 +369,3 @@ body {
 }
 
 
-//
