@@ -5,7 +5,6 @@ import EasyBoutonBonus from "./components/EasyBoutonBonus.jsx";
 import MediumBoutonBonus from "./components/MediumBoutonBonus.jsx";
 import HardBoutonBonus from "./components/HardBoutonBonus.jsx";
 import Loose from "./components/Loose.jsx";
-import Instructions from "./components/Instructions/Instructions.jsx";
 
 function Game(props) {
 
@@ -174,7 +173,6 @@ function Game(props) {
             setScore(score += 1)
         }}>
             <Score score={score} highScore={highScore}/>
-            {/*<Instructions/>*/}
             {<h1>{loose && <Loose score={score} highScore={highScore} tryAgain={() => location.reload()}/>}</h1>}
             {pause && <p>Pause jusqu'à 120</p>}
             {medium && <MediumBoutonBonus medium1={() => setScore(score += 19)} medium2={() => {
