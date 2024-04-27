@@ -5,6 +5,7 @@ import EasyBoutonBonus from "./components/EasyBoutonBonus.jsx";
 import MediumBoutonBonus from "./components/MediumBoutonBonus.jsx";
 import HardBoutonBonus from "./components/HardBoutonBonus.jsx";
 import Loose from "./components/Loose.jsx";
+import Instructions from "./components/Instructions/Instructions.jsx";
 
 function Game(props) {
 
@@ -23,11 +24,8 @@ function Game(props) {
     const [pause, setPause] = useState(false)
     const [loose, setLoose] = useState(false)
     const [medium, setMedium] = useState(true)
-    const [hard, setHard] = useState(false)
-    const [win, setWin] = useState(false)
+    const [hard, setHard] = useState(true)
 
-    // github token
-    // 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
 
 
     useEffect(() => {
@@ -75,9 +73,9 @@ function Game(props) {
         } else if (score >= 21 && score <= 50) {
             setSpeed(getRandomSpeed(300, 300))
             setPixel(7)
-        } else if (score >= 51 && score <= 53) {
-            setSpeed(getRandomSpeed(20, 10))
-        } else if (score >= 54 && score <= 99) {
+        } else if (score >= 51 && score <= 55) {
+            setSpeed(getRandomSpeed(40, 60))
+        } else if (score >= 56 && score <= 99) {
             setSpeed(getRandomSpeed(220, 230))
         } else if (score >= 100 && score <= 120) {
             setFallingTrigger(false)
@@ -86,45 +84,41 @@ function Game(props) {
         } else if (score >= 121 && score <= 129) {
             setFallingTrigger(true)
             setSpeed(getRandomSpeed(70, 90))
-            setPixel(1.2)
+            setPixel(1.5)
             setPause(false)
         } else if (score >= 130 && score <= 189) {
             setSpeed(getRandomSpeed(200, 210))
-        } else if (score >= 190 && score <= 196) {
+        } else if (score >= 190 && score <= 199) {
             setSpeed(getRandomSpeed(30, 40))
-        } else if (score >= 197 && score <= 220) {
+        } else if (score >= 200 && score <= 220) {
             setSpeed(getRandomSpeed(200, 310))
         } else if (score >= 221 && score <= 250) {
             setSpeed(getRandomSpeed(80, 100))
-            setWin(true)
-            setPixel(1.8)
         } else if (score >= 250 && score <= 300) {
             const last_interval = setInterval(() => {
-                setSpeed(getRandomSpeed(80, 280))
+                setSpeed(getRandomSpeed(60, 280))
                 clearInterval(last_interval)
             }, 1 * 1000)
         } else if (score >= 301 && score <= 320) {
-            setPixel(1.5)
             const last_interval = setInterval(() => {
                 setSpeed(getRandomSpeed(100, 200))
                 clearInterval(last_interval)
             }, 4 * 100)
         } else if (score >= 321 && score <= 371) {
             const last_interval = setInterval(() => {
-                setSpeed(getRandomSpeed(80, 150))
+                setSpeed(getRandomSpeed(50, 150))
                 clearInterval(last_interval)
             }, 2.2 * 1000)
         } else if (score >= 372 && score <= 400) {
             const last_interval = setInterval(() => {
-                setSpeed(getRandomSpeed(300, 350))
+                setSpeed(getRandomSpeed(100, 200))
                 clearInterval(last_interval)
             }, 3 * 1000)
         } else if (score >= 401) {
-            setPixel(1.4)
             const last_interval = setInterval(() => {
-                setSpeed(getRandomSpeed(70, 140))
+                setSpeed(getRandomSpeed(60, 140))
                 clearInterval(last_interval)
-            }, 3 * 1000)
+            }, 4 * 1000)
         }
 
 
@@ -180,6 +174,7 @@ function Game(props) {
             setScore(score += 1)
         }}>
             <Score score={score} highScore={highScore}/>
+            {/*<Instructions/>*/}
             {<h1>{loose && <Loose score={score} highScore={highScore} tryAgain={() => location.reload()}/>}</h1>}
             {pause && <p>Pause jusqu'à 120</p>}
             {medium && <MediumBoutonBonus medium1={() => setScore(score += 19)} medium2={() => {
@@ -204,8 +199,6 @@ function Game(props) {
                 setPixel(5)
                 setTimeout(() => setPixel(1.2), 10 * 1000)
             }}></EasyBoutonBonus>
-            {/*<h1>{Math.round(speed)}/ms</h1>*/}
-            {/*<h1>safe_zone + {pixel} by click</h1>*/}
             <div ref={KEEP_SAFE_ZONE_REF} style={{top: translationY + "px"}} className="zone-in zoneToKeepSafe">
                 <h1>ZONE À DÉFENDRE</h1>
             </div>
