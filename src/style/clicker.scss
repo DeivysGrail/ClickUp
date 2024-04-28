@@ -59,7 +59,7 @@ body {
 .MAIN {
   height: 100vh;
   overflow: hidden;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -120,20 +120,16 @@ body {
 
   }
 
+
   &__EASY_BUTTON {
     height: 90%;
     width: 90%;
-    left: 50%;
-    transform: translate(-50%);
-    position: relative;
-    z-index: 1;
     margin: 0 auto;
 
     .EasyButton-1 {
       position: absolute;
 
       &__button {
-        position: relative;
         width: 100px;
         border-radius: 100%;
         height: 100px;
@@ -148,7 +144,6 @@ body {
       position: absolute;
 
       &__button {
-        position: relative;
         width: 100px;
         border-radius: 100%;
         height: 100px;
@@ -166,7 +161,6 @@ body {
       position: absolute;
 
       &__button {
-        position: relative;
         width: 70px;
         border-radius: 100%;
         height: 60px;
@@ -185,17 +179,12 @@ body {
   &__MEDIUM_BUTTON {
     height: 90%;
     width: 90%;
-    z-index: 1;
-    left: 50%;
-    transform: translate(-50%);
-    position: relative;
     margin: 0 auto;
 
     .MediumButton-1 {
       position: absolute;
 
       &__button {
-        position: relative;
         width: 100px;
         border-radius: 100%;
         height: 100px;
@@ -207,111 +196,104 @@ body {
     }
 
     .MediumButton-2 {
-      position: absolute;
+          position: absolute;
 
-      &__button {
-        position: relative;
-        width: 100px;
-        border-radius: 100%;
-        height: 100px;
-        background: url("../assets/bonus_ico/5s_large.png");
-        background-size: cover;
-        clip-path: circle(50%);
-        border: none;
-
-
-      }
+          &__button {
+            width: 100px;
+            border-radius: 100%;
+            height: 100px;
+            background: url("../assets/bonus_ico/5s_large.png");
+            background-size: cover;
+            clip-path: circle(50%);
+            border: none;
 
 
-    }
+          }
+
+
+        }
 
     .MediumButton-3 {
-      position: absolute;
+          position: absolute;
 
-      &__button {
-        position: relative;
-        width: 90px;
-        border-radius: 100%;
-        height: 80px;
-        background: url("../assets/bonus_ico/10px_large.png") no-repeat;
-        background-size: contain;
-        clip-path: circle(50%);
-        border: none;
-
+          &__button {
+            width: 90px;
+            border-radius: 100%;
+            height: 80px;
+            background: url("../assets/bonus_ico/10px_large.png") no-repeat;
+            background-size: contain;
+            clip-path: circle(50%);
+            border: none;
 
 
-      }
 
-    }
+          }
+
+        }
 
 
   }
-
 
   &__HARD_BUTTON {
     height: 90%;
     width: 90%;
-    z-index: 1;
-    left: 50%;
-    transform: translate(-50%);
-    position: relative;
     margin: 0 auto;
+    background: blue;
+
 
     .HardButton-1 {
-      position: absolute;
+          position: absolute;
 
-      &__button {
-        position: relative;
-        width: 60px;
-        border-radius: 100%;
-        height: 60px;
-        background: url("../assets/bonus_ico/30pt_large.png");
-        background-size: cover;
-        clip-path: circle(50%);
-        border: none;
-      }
-    }
+          &__button {
+            width: 60px;
+            border-radius: 100%;
+            height: 60px;
+            background: url("../assets/bonus_ico/30pt_large.png");
+            background-size: cover;
+            clip-path: circle(50%);
+            border: none;
+          }
+        }
 
     .HardButton-2 {
-      position: absolute;
+          position: absolute;
 
-      &__button {
-        position: relative;
-        width: 50px;
-        border-radius: 100%;
-        height: 50px;
-        background: url("../assets/bonus_ico/8s_large.png");
-        background-size: cover;
-        clip-path: circle(50%);
-        border: none;
-
-
-      }
+          &__button {
+            width: 50px;
+            border-radius: 100%;
+            height: 50px;
+            background: url("../assets/bonus_ico/8s_large.png");
+            background-size: cover;
+            clip-path: circle(50%);
+            border: none;
 
 
-    }
+          }
+
+
+        }
 
     .HardButton-3 {
-      position: absolute;
+          position: absolute;
 
-      &__button {
-        position: relative;
-        width: 70px;
-        border-radius: 100%;
-        height: 60px;
-        background: url("../assets/bonus_ico/20px_large.png") no-repeat;
-        background-size: contain;
-        clip-path: circle(50%);
-        border: none;
-
+          &__button {
+            width: 70px;
+            border-radius: 100%;
+            height: 60px;
+            background: url("../assets/bonus_ico/20px_large.png") no-repeat;
+            background-size: contain;
+            clip-path: circle(50%);
+            border: none;
 
 
-      }
 
-    }
+          }
 
+        }
 
   }
+
+
 
 
   &__SCORE {
