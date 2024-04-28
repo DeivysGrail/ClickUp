@@ -13,6 +13,7 @@
 
 body {
   background: radial-gradient(circle, rgba(132, 222, 133, 1) 0%, rgba(35, 36, 36, 1) 100%);
+  //background: url("../assets/wallpaper.jpg");
   height: 100vh;
   overflow: hidden;
   font-family: $Poppins;
@@ -21,23 +22,22 @@ body {
 .INSTRUCTIONS {
   text-align: center;
   background: red;
-  width: 50%;
   margin: 0 auto;
 
   &__header {
-
+    background: orange;
     &--title {
 
     }
 
     &--logo {
-
     }
 
 
   }
 
   &__bonus {
+    background: blue;
 
     &__BONUS_CONTAINER {
     }
@@ -290,7 +290,7 @@ body {
     .HardButton-3 {
       position: absolute;
       z-index: 2;
-      
+
 
       &__button {
         width: 70px;
@@ -310,8 +310,17 @@ body {
 
 
   &__SCORE {
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 30px;
     position: relative;
-
+    color: #f1f1f1;
+    text-align: left;
+    @media screen and (max-width: 470px) {
+      padding: 10px 2px;
+      margin: 0;
+      font-size: .6rem;
+    }
     &--score {
     }
 
