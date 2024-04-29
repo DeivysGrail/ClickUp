@@ -316,11 +316,13 @@ body {
     position: relative;
     color: #f1f1f1;
     text-align: left;
+
     @media screen and (max-width: 470px) {
       padding: 10px 2px;
       margin: 0;
       font-size: .6rem;
     }
+
     &--score {
     }
 
@@ -345,20 +347,21 @@ body {
     background: #1e1e1e;
     margin: 0 auto;
 
+      @media screen and (max-width: 500px) {
+        font-size: 1.3rem;
+      }
+
     &--text {
       text-decoration: underline crimson 10px;
     }
 
     &--score {
 
-      @media screen and (max-width: 500px) {
-        font-size: 1.6rem;
-      }
+    }
 
       &--highScore {
-      }
+        margin-bottom: 20px;      }
 
-    }
 
     &--button {
       padding: 5px 10px;
