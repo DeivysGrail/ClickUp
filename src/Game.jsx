@@ -78,13 +78,11 @@ function Game(props) {
             setSpeed(getRandomSpeed(220, 230))
         } else if (score >= 100 && score <= 120) {
             setFallingTrigger(false)
-            setPause(true)
-            setPixel(2.4)
+            setPixel(2.6)
         } else if (score >= 121 && score <= 129) {
             setFallingTrigger(true)
             setSpeed(getRandomSpeed(70, 90))
             setPixel(1.5)
-            setPause(false)
         } else if (score >= 130 && score <= 189) {
             setSpeed(getRandomSpeed(200, 210))
         } else if (score >= 190 && score <= 199) {
@@ -174,7 +172,6 @@ function Game(props) {
         }}>
             <Score score={score} highScore={highScore}/>
             {<h1>{loose && <Loose score={score} highScore={highScore} tryAgain={() => location.reload()}/>}</h1>}
-            {pause && <p>Pause jusqu'à 120</p>}
             {medium && <MediumBoutonBonus medium1={() => setScore(score += 19)} medium2={() => {
                 setFallingTrigger(false)
                 setTimeout(() => setFallingTrigger(true), 5 * 1000)
