@@ -77,10 +77,10 @@ function Game(props) {
         } else if (score >= 56 && score <= 99) {
             setSpeed(getRandomSpeed(220, 230))
         } else if (score >= 100 && score <= 120) {
-            setFallingTrigger(false)
+            
             setPixel(2.6)
         } else if (score >= 121 && score <= 129) {
-            setFallingTrigger(true)
+           
             setSpeed(getRandomSpeed(70, 90))
             setPixel(1.5)
         } else if (score >= 130 && score <= 189) {
