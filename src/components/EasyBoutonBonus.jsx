@@ -31,7 +31,7 @@ function EasyBoutonBonus(props) {
         setTimeout(() => setReady(false), 3 * 1000)
     }
 
-
+    //
     useEffect(() => {
         const interval = setInterval(boxReady, 3 * 1000)
         return () => clearInterval(interval)

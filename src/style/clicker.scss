@@ -504,6 +504,74 @@ body {
 
     }
 
+<<<<<<< HEAD
+=======
+  }
+}
+
+
+@media screen and (max-width: 610px) {
+
+
+  .MAIN {
+
+    &__INSTRUCTIONS {
+
+      width: 420px;
+      padding: 5px;
+      height: 90%;
+
+      &__header {
+
+
+        &--logo {
+          width: 40%;
+          margin-bottom: 20px;
+        }
+
+        &--text {
+          margin-top: 10px;
+          font-size: 1.4rem;
+        }
+
+        &--explication {
+          text-align: center;
+        }
+
+      }
+
+      &__bonus {
+
+        overflow-y: scroll;
+        height: 600px;
+
+        &__BONUS_CONTAINER {
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          border: none;
+          padding: 10px;
+          &--logo {
+            width: 100px;
+            height: 100px;
+            aspect-ratio: 1;
+            border: none;
+            margin: 10px 0;
+          }
+
+          &--text {
+            width: 100%;
+            margin-left: 10px;
+            border-bottom: solid #f1f1f1 2px;
+
+          }
+
+        }
+      }
+
+    }
+
+>>>>>>> a341f27b13fc50797d4aaa3f7b3a72f800de56dc
   }
 }
 

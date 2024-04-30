@@ -10,7 +10,11 @@ function MediumBoutonBonus(props) {
     }
 
 
+<<<<<<< HEAD
         const [triggerBox, setTriggerBox] = useState(function () {
+=======
+    const [triggerBox, setTriggerBox] = useState(function () {
+>>>>>>> a341f27b13fc50797d4aaa3f7b3a72f800de56dc
 
         setTimeout(() => {
             return null
@@ -20,7 +24,11 @@ function MediumBoutonBonus(props) {
 
     })
 
+<<<<<<< HEAD
     const [ready, setReady] = useState(true)
+=======
+    const [ready, setReady] = useState(false)
+>>>>>>> a341f27b13fc50797d4aaa3f7b3a72f800de56dc
     const [left, setLeft] = useState(Math.round((Math.random() * 80) ))
     const [top, setTop] = useState(Math.round((Math.random() * 80) ))
 
