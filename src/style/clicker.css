@@ -1,50 +1,381 @@
-/*
-Error: Invalid CSS after "=======": expected "{", was "}"
-        on line 509 of clicker.scss
+@font-face {
+  src: url("src/assets/Poppins/Poppins-Regular.ttf");
+  font-family: Poppins; }
+/*  FontSize   */
+/*  Fonts   */
+/*  Colors :   */
+/*  Border Radius   */
+/*  Borders   */
+@font-face {}
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-504: 
-505:     }
-506: 
-507: <<<<<<< HEAD
-508: =======
-509:   }
-510: }
-511: 
-512: 
-513: @media screen and (max-width: 610px) {
-514: 
+body {
+  background: radial-gradient(circle, #84de85 0%, #232424 100%);
+  height: 100vh;
+  overflow: hidden;
+  font-family: Poppins, sans-serif; }
 
-Backtrace:
-clicker.scss:509
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1308:in `expected'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1238:in `expected'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1233:in `tok!'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:688:in `block'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:758:in `declaration_or_ruleset'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:708:in `block_child'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:700:in `block_contents'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:689:in `block'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:758:in `declaration_or_ruleset'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:708:in `block_child'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:697:in `block_contents'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:689:in `block'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:421:in `media_directive'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:234:in `special_directive'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:209:in `directive'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:707:in `block_child'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:700:in `block_contents'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:137:in `stylesheet'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:41:in `parse'
-/usr/lib/ruby/vendor_ruby/sass/engine.rb:414:in `_to_tree'
-/usr/lib/ruby/vendor_ruby/sass/engine.rb:389:in `_render_with_sourcemap'
-/usr/lib/ruby/vendor_ruby/sass/engine.rb:307:in `render_with_sourcemap'
-/usr/lib/ruby/vendor_ruby/sass/exec/sass_scss.rb:383:in `run'
-/usr/lib/ruby/vendor_ruby/sass/exec/sass_scss.rb:63:in `process_result'
-/usr/lib/ruby/vendor_ruby/sass/exec/base.rb:50:in `parse'
-/usr/lib/ruby/vendor_ruby/sass/exec/base.rb:18:in `parse!'
-/usr/bin/sass:8:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"=======\": expected \"{\", was \"}\"\A         on line 509 of clicker.scss\A \A 504: \A 505:     }\A 506: \A 507: <<<<<<< HEAD\A 508: =======\A 509:   }\A 510: }\A 511: \A 512: \A 513: @media screen and (max-width: 610px) {\A 514: "; }
+.MAIN {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden; }
+  .MAIN .zone-in {
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    width: 100%; }
+  .MAIN .zoneToKeepSafe {
+    background: #191f22;
+    top: 0;
+    font-size: 1rem;
+    color: crimson;
+    padding: 3px 10px;
+    border: inset white 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40vw;
+    margin: 0 auto;
+    transition: all .4s ease; }
+    .MAIN .zoneToKeepSafe h1::selection {
+      background: transparent; }
+    @media screen and (max-width: 770px) {
+      .MAIN .zoneToKeepSafe {
+        font-size: .8rem;
+        width: max-content; } }
+  .MAIN .deathZone {
+    color: #f1f1F1;
+    background-image: linear-gradient(67.5deg, #eb4942 0%, #eb4942 14%, #c54c39 14%, #c54c39 36%, #9f4e30 36%, #9f4e30 42%, #795127 42%, #795127 45%, #53541d 45%, #53541d 79%, #2d5614 79%, #2d5614 83%, #07590b 83%, #07590b 100%), linear-gradient(112.5deg, #eb4942 0%, #eb4942 14%, #c54c39 14%, #c54c39 36%, #9f4e30 36%, #9f4e30 42%, #795127 42%, #795127 45%, #53541d 45%, #53541d 79%, #2d5614 79%, #2d5614 83%, #07590b 83%, #07590b 100%), linear-gradient(22.5deg, #eb4942 0%, #eb4942 14%, #c54c39 14%, #c54c39 36%, #9f4e30 36%, #9f4e30 42%, #795127 42%, #795127 45%, #53541d 45%, #53541d 79%, #2d5614 79%, #2d5614 83%, #07590b 83%, #07590b 100%), linear-gradient(301deg, #eb4942 0%, #eb4942 14%, #c54c39 14%, #c54c39 36%, #9f4e30 36%, #9f4e30 42%, #795127 42%, #795127 45%, #53541d 45%, #53541d 79%, #2d5614 79%, #2d5614 83%, #07590b 83%, #07590b 100%), linear-gradient(301deg, #a9051d, #330d3b);
+    background-blend-mode: overlay, overlay, overlay, overlay, normal;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0.25rem; }
+    .MAIN .deathZone h1::selection {
+      background: transparent; }
+  .MAIN__EASY_BUTTON {
+    height: 90%;
+    width: 90%;
+    margin: 0 auto; }
+    .MAIN__EASY_BUTTON .EasyButton-1 {
+      position: absolute;
+      z-index: 2; }
+      .MAIN__EASY_BUTTON .EasyButton-1__button {
+        width: 100px;
+        border-radius: 100%;
+        height: 100px;
+        background: url("../assets/bonus_ico/10pt_large.png");
+        background-size: cover;
+        clip-path: circle(50%);
+        border: none; }
+    .MAIN__EASY_BUTTON .EasyButton-2 {
+      position: absolute;
+      z-index: 2;
+      z-index: 2; }
+      .MAIN__EASY_BUTTON .EasyButton-2__button {
+        width: 100px;
+        border-radius: 100%;
+        height: 100px;
+        background: url("../assets/bonus_ico/3s_large.png");
+        background-size: cover;
+        clip-path: circle(50%);
+        border: none; }
+    .MAIN__EASY_BUTTON .EasyButton-3 {
+      position: absolute;
+      z-index: 2; }
+      .MAIN__EASY_BUTTON .EasyButton-3__button {
+        width: 70px;
+        border-radius: 100%;
+        height: 60px;
+        background: url("../assets/bonus_ico/5px_large.png") no-repeat;
+        background-size: contain;
+        clip-path: circle(50%);
+        border: none; }
+  .MAIN__MEDIUM_BUTTON {
+    height: 90%;
+    width: 90%;
+    margin: 0 auto; }
+    .MAIN__MEDIUM_BUTTON .MediumButton-1 {
+      position: absolute;
+      z-index: 2; }
+      .MAIN__MEDIUM_BUTTON .MediumButton-1__button {
+        width: 100px;
+        border-radius: 100%;
+        height: 100px;
+        background: url("../assets/bonus_ico/20pt_large.png");
+        background-size: cover;
+        clip-path: circle(50%);
+        border: none; }
+    .MAIN__MEDIUM_BUTTON .MediumButton-2 {
+      position: absolute;
+      z-index: 2; }
+      .MAIN__MEDIUM_BUTTON .MediumButton-2__button {
+        width: 100px;
+        border-radius: 100%;
+        height: 100px;
+        background: url("../assets/bonus_ico/5s_large.png");
+        background-size: cover;
+        clip-path: circle(50%);
+        border: none; }
+    .MAIN__MEDIUM_BUTTON .MediumButton-3 {
+      position: absolute;
+      z-index: 2; }
+      .MAIN__MEDIUM_BUTTON .MediumButton-3__button {
+        width: 90px;
+        border-radius: 100%;
+        height: 80px;
+        background: url("../assets/bonus_ico/10px_large.png") no-repeat;
+        background-size: contain;
+        clip-path: circle(50%);
+        border: none; }
+  .MAIN__HARD_BUTTON {
+    height: 90%;
+    width: 90%;
+    margin: 0 auto; }
+    .MAIN__HARD_BUTTON .HardButton-1 {
+      position: absolute;
+      z-index: 2; }
+      .MAIN__HARD_BUTTON .HardButton-1__button {
+        width: 60px;
+        border-radius: 100%;
+        height: 60px;
+        background: url("../assets/bonus_ico/30pt_large.png");
+        background-size: cover;
+        clip-path: circle(50%);
+        border: none; }
+    .MAIN__HARD_BUTTON .HardButton-2 {
+      position: absolute;
+      z-index: 2; }
+      .MAIN__HARD_BUTTON .HardButton-2__button {
+        width: 50px;
+        border-radius: 100%;
+        height: 50px;
+        background: url("../assets/bonus_ico/8s_large.png");
+        background-size: cover;
+        clip-path: circle(50%);
+        border: none; }
+    .MAIN__HARD_BUTTON .HardButton-3 {
+      position: absolute;
+      z-index: 2; }
+      .MAIN__HARD_BUTTON .HardButton-3__button {
+        width: 70px;
+        border-radius: 100%;
+        height: 60px;
+        background: url("../assets/bonus_ico/20px_large.png") no-repeat;
+        background-size: contain;
+        clip-path: circle(50%);
+        border: none; }
+  .MAIN__SCORE {
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 30px;
+    position: relative;
+    color: #f1f1f1;
+    text-align: left; }
+    .MAIN__SCORE--highScore {
+      font-size: 1rem; }
+  .MAIN__LOOSE {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    inset: 0;
+    color: crimson;
+    position: absolute;
+    z-index: 300;
+    height: 100vh;
+    background: #1e1e1e;
+    margin: 0 auto;
+    overflow: hidden; }
+    @media screen and (max -width: 500px) {
+      .MAIN__LOOSE {
+        font-size: 1.3rem; } }
+    .MAIN__LOOSE--text {
+      text-decoration: underline crimson 10px; }
+    .MAIN__LOOSE--highScore {
+      margin-bottom: 20px; }
+    .MAIN__LOOSE--button {
+      padding: 5px 10px;
+      height: 50px;
+      border-radius: 5px;
+      border: none;
+      letter-spacing: 2px;
+      width: max-content;
+      background: crimson;
+      font-weight: bold; }
+    .MAIN__LOOSE--openButton {
+      top: 0;
+      position: absolute;
+      margin-top: 20px;
+      border: solid black 1px;
+      border-radius: 50%;
+      width: 50px;
+      aspect-ratio: 1;
+      height: 50px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      z-index: 1000; }
+    .MAIN__LOOSE--closeButton {
+      cursor: pointer;
+      position: absolute;
+      right: 5%;
+      display: block;
+      top: 3%;
+      width: 50px;
+      height: 50px; }
+  .MAIN__INSTRUCTIONS {
+    position: relative;
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    border: solid white 4px;
+    border-radius: 2rem;
+    transform: translateY(-15%);
+    background: #1f1f1e;
+    color: #f1f1f1;
+    padding: 10px;
+    z-index: 301; }
+    .MAIN__INSTRUCTIONS__header {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .MAIN__INSTRUCTIONS__header--logo {
+        width: 15%; }
+      .MAIN__INSTRUCTIONS__header--explication {
+        font-size: 1.1rem;
+        padding: 10px; }
+    .MAIN__INSTRUCTIONS__bonus {
+      margin: 0 auto; }
+      .MAIN__INSTRUCTIONS__bonus--description {
+        width: 80%;
+        line-height: 1.6;
+        font-size: 1.1rem;
+        margin: 0 auto 20px; }
+      .MAIN__INSTRUCTIONS__bonus__BONUS_CONTAINER {
+        border: solid black 1px;
+        display: flex;
+        width: 100%; }
+        .MAIN__INSTRUCTIONS__bonus__BONUS_CONTAINER--logo {
+          padding: 5px;
+          border: solid black 1px;
+          width: 10%;
+          background: #1e1e1e; }
+        .MAIN__INSTRUCTIONS__bonus__BONUS_CONTAINER--text {
+          text-align: left;
+          font-size: 1.3rem;
+          margin-left: 100px; }
+    .MAIN__INSTRUCTIONS--startButton {
+      height: 60px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      letter-spacing: 4px;
+      cursor: pointer;
+      border-radius: 10px;
+      border: none;
+      margin: 20px auto 10px;
+      width: 200px; }
+
+@media screen and (max-width: 910px) {
+  .MAIN__INSTRUCTIONS {
+    width: 600px; }
+    .MAIN__INSTRUCTIONS__header--logo {
+      width: 20%; }
+    .MAIN__INSTRUCTIONS__header--text {
+      margin-top: 10px;
+      font-size: 1.4rem; }
+    .MAIN__INSTRUCTIONS__header--explication {
+      text-align: center; }
+    .MAIN__INSTRUCTIONS__bonus__BONUS_CONTAINER {
+      align-items: center;
+      justify-content: flex-start; }
+      .MAIN__INSTRUCTIONS__bonus__BONUS_CONTAINER--logo {
+        width: 100px;
+        height: 100px;
+        aspect-ratio: 1; }
+      .MAIN__INSTRUCTIONS__bonus__BONUS_CONTAINER--text {
+        width: 100%;
+        margin-left: 10px; } }
+@media screen and (max-width: 415px) {
+  .MAIN__INSTRUCTIONS {
+    width: 400px;
+    padding: 5px;
+    height: 90%; }
+    .MAIN__INSTRUCTIONS__header--logo {
+      width: 40%;
+      margin-bottom: 20px; }
+    .MAIN__INSTRUCTIONS__header--text {
+      margin-top: 10px;
+      font-size: 1.4rem; }
+    .MAIN__INSTRUCTIONS__header--explication {
+      text-align: center; }
+    .MAIN__INSTRUCTIONS__bonus {
+      overflow-y: scroll;
+      height: 600px; }
+      .MAIN__INSTRUCTIONS__bonus__BONUS_CONTAINER {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        border: none;
+        padding: 10px; }
+        .MAIN__INSTRUCTIONS__bonus__BONUS_CONTAINER--logo {
+          width: 100px;
+          height: 100px;
+          aspect-ratio: 1;
+          border: none;
+          margin: 10px 0; }
+        .MAIN__INSTRUCTIONS__bonus__BONUS_CONTAINER--text {
+          width: 100%;
+          margin-left: 10px;
+          border-bottom: solid #f1f1f1 2px; } }
+@media screen and (max-width: 610px) {
+  .MAIN__LOOSE--closeButton {
+    top: 1%;
+    width: 40px;
+    height: 40px; }
+  .MAIN__INSTRUCTIONS {
+    width: 370px;
+    padding: 5px;
+    height: 80%; }
+    .MAIN__INSTRUCTIONS__header--logo {
+      width: 40%;
+      margin-bottom: 20px; }
+    .MAIN__INSTRUCTIONS__header--text {
+      margin-top: 10px;
+      font-size: 1.4rem; }
+    .MAIN__INSTRUCTIONS__header--explication {
+      font-size: 1.2rem; }
+    .MAIN__INSTRUCTIONS__bonus {
+      font-size: 1.1rem;
+      overflow-y: scroll;
+      height: 600px;
+      text-align: center; }
+      .MAIN__INSTRUCTIONS__bonus__BONUS_CONTAINER {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        border: none;
+        padding: 10px; }
+        .MAIN__INSTRUCTIONS__bonus__BONUS_CONTAINER--logo {
+          width: 100px;
+          height: 100px;
+          aspect-ratio: 1;
+          border: none;
+          margin: 10px 0; }
+        .MAIN__INSTRUCTIONS__bonus__BONUS_CONTAINER--text {
+          padding: 10px;
+          text-align: center;
+          width: 100%;
+          margin-left: 10px;
+          border-bottom: solid #f1f1f1 2px; } }
+
+/*# sourceMappingURL=clicker.css.map */

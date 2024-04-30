@@ -6,7 +6,6 @@ import MediumBoutonBonus from "./components/MediumBoutonBonus.jsx";
 import HardBoutonBonus from "./components/HardBoutonBonus.jsx";
 import Loose from "./components/Loose.jsx";
 import Instructions from "./components/Instructions/Instructions.jsx";
-
 function Game(props) {
 
     function getRandomSpeed(min, max) {

@@ -10,7 +10,7 @@ function Loose(props) {
         <p className={"MAIN__LOOSE--highScore"}>Meilleur score : {props.highScore}</p>
         <button className={"MAIN__LOOSE--button"} onClick={props.tryAgain}>RÉESSAYER</button>
         <button className={"MAIN__LOOSE--openButton"} onClick={props.triggerInfo}>Info</button>
-            <img src={close_button} style={props.actif ? {visibility:"visible"} : {visibility: "hidden"}} className={"MAIN__LOOSE--closeButton"} onClick={props.trigger}/>
+                <img src={close_button} style={props.actif ? {visibility:"visible"} : {visibility: "hidden"}} className={"MAIN__LOOSE--closeButton"} onClick={props.trigger}/>
 
         </div>
 
