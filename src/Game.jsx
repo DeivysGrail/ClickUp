@@ -1,10 +1,11 @@
 import Score from "./components/Score.jsx";
 import './style/clicker.scss'
-import {useEffect, useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import EasyBoutonBonus from "./components/EasyBoutonBonus.jsx";
 import MediumBoutonBonus from "./components/MediumBoutonBonus.jsx";
 import HardBoutonBonus from "./components/HardBoutonBonus.jsx";
 import Loose from "./components/Loose.jsx";
+import Instructions from "./components/Instructions/Instructions.jsx";
 
 function Game(props) {
 
@@ -19,22 +20,15 @@ function Game(props) {
     let [score, setScore] = useState(0)
     const [highScore, setHighScore] = useState(localStorage.getItem('score'))
     let [translationY, setTranslationY] = useState(0)
-    const [fallingTrigger, setFallingTrigger] = useState(true)
+    const [fallingTrigger, setFallingTrigger] = useState(false)
     const [pause, setPause] = useState(false)
     const [loose, setLoose] = useState(false)
-    const [medium, setMedium] = useState(true)
+    const [medium, setMedium] = useState(false)
     const [hard, setHard] = useState(true)
-
-
-
+    const [instruction, setInstructions] = useState(true)
+    const [bonus, setBonus] = useState(false)
     useEffect(() => {
-        window.addEventListener('keypress', (e) => {
-            if (e.code === "Space") {
-                up()
-                setScore(score++)
 
-            }
-        })
         checkCollision(KEEP_SAFE_ZONE_REF.current, DEATH_ZONE_REF.current)
         const interval = setInterval(down, speed);
         return () => clearInterval(interval);
@@ -66,7 +60,7 @@ function Game(props) {
 
 
         if (score <= 2) {
-            setSpeed(getRandomSpeed(30, 30))
+            setSpeed(getRandomSpeed(50, 60))
         } else if (score >= 3 && score <= 20) {
             setSpeed(getRandomSpeed(350, 350))
         } else if (score >= 21 && score <= 50) {
@@ -77,10 +71,10 @@ function Game(props) {
         } else if (score >= 56 && score <= 99) {
             setSpeed(getRandomSpeed(220, 230))
         } else if (score >= 100 && score <= 120) {
-            
-            setPixel(2.6)
+            setFallingTrigger(false)
+            setPixel(2.4)
         } else if (score >= 121 && score <= 129) {
-           
+            setFallingTrigger(true)
             setSpeed(getRandomSpeed(70, 90))
             setPixel(1.5)
         } else if (score >= 130 && score <= 189) {
@@ -150,6 +144,8 @@ function Game(props) {
             deathZone.style.background = 'black'
             deathZone.style.color = 'red'
             deathZone.style.borderBottom = 'none'
+            setFallingTrigger(false)
+            setBonus(false)
             setLoose(true)
             saveScore()
 
@@ -171,29 +167,35 @@ function Game(props) {
             setScore(score += 1)
         }}>
             <Score score={score} highScore={highScore}/>
-            {<h1>{loose && <Loose score={score} highScore={highScore} tryAgain={() => location.reload()}/>}</h1>}
-            {medium && <MediumBoutonBonus medium1={() => setScore(score += 19)} medium2={() => {
+            {instruction && <Instructions startGame={() => {
+                setFallingTrigger(true)
+                setBonus    (true)
+                setInstructions(false)
+            }}/>}
+            {<h1>{loose && <Loose actif={instruction} trigger={() => setInstructions(false)} score={score} highScore={highScore} tryAgain={() => location.reload()} triggerInfo={() => setInstructions(true)}/>}</h1>}
+            {(medium && bonus) && <MediumBoutonBonus medium1={() => setScore(score += 19)} medium2={() => {
                 setFallingTrigger(false)
                 setTimeout(() => setFallingTrigger(true), 5 * 1000)
             }} medium3={() => {
                 setPixel(10)
                 setTimeout(() => setPixel(1.2), 10 * 1000)
             }}></MediumBoutonBonus>}
-
-            {hard && <HardBoutonBonus hard1={() => setScore(score += 29)} hard2={() => {
+            {(hard && bonus) && <HardBoutonBonus hard1={() => setScore(score += 29)} hard2={() => {
                 setFallingTrigger(false)
                 setTimeout(() => setFallingTrigger(true), 8 * 1000)
             }} hard3={() => {
                 setPixel(20)
                 setTimeout(() => setPixel(1.2), 10 * 1000)
             }}></HardBoutonBonus>}
-            <EasyBoutonBonus easy1={() => setScore(score += 9)} easy2={() => {
+            {bonus && <EasyBoutonBonus easy1={() => setScore(score += 9)} easy2={() => {
                 setFallingTrigger(false)
                 setTimeout(() => setFallingTrigger(true), 3 * 1000)
             }} easy3={() => {
                 setPixel(5)
                 setTimeout(() => setPixel(1.2), 10 * 1000)
-            }}></EasyBoutonBonus>
+            }}></EasyBoutonBonus>}
+            {/*<h1>{Math.round(speed)}/ms</h1>*/}
+            {/*<h1>safe_zone + {pixel} by click</h1>*/}
             <div ref={KEEP_SAFE_ZONE_REF} style={{top: translationY + "px"}} className="zone-in zoneToKeepSafe">
                 <h1>ZONE À DÉFENDRE</h1>
             </div>
