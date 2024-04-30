@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import '../style/clicker.scss'
 
-function MediumBoutonBonus(props) {
+export default function MediumBoutonBonus(props) {
 
 
     function getRandomNumber(min, max) {
@@ -10,73 +10,63 @@ function MediumBoutonBonus(props) {
     }
 
 
-<<<<<<< HEAD
         const [triggerBox, setTriggerBox] = useState(function () {
-=======
-    const [triggerBox, setTriggerBox] = useState(function () {
->>>>>>> a341f27b13fc50797d4aaa3f7b3a72f800de56dc
+            setTimeout(() => {
+                return null
+            }, 3000)
 
-        setTimeout(() => {
-            return null
-        }, 3000)
+            return Math.round(getRandomNumber(1, 3))
 
-        return Math.round(getRandomNumber(1, 3))
-
-    })
-
-<<<<<<< HEAD
-    const [ready, setReady] = useState(true)
-=======
-    const [ready, setReady] = useState(false)
->>>>>>> a341f27b13fc50797d4aaa3f7b3a72f800de56dc
-    const [left, setLeft] = useState(Math.round((Math.random() * 80) ))
-    const [top, setTop] = useState(Math.round((Math.random() * 80) ))
-
-    function boxReady() {
-        setReady(true)
-        setTriggerBox(Math.round(getRandomNumber(1, 3)))
-        setLeft(Math.round((Math.random() * 100) ))
-        setTop(Math.round((Math.random() * 100) ))
-        setTimeout(() => setReady(false), 2  * 1000)
-    }
+        })
 
 
-    useEffect(() => {
-        const interval = setInterval(boxReady, 6 * 1000)
-        return () => clearInterval(interval)
+        const [ready, setReady] = useState(false)
 
-    }, [triggerBox])
+        const [left, setLeft] = useState(Math.round((Math.random() * 80)))
+        const [top, setTop] = useState(Math.round((Math.random() * 80)))
 
-
-
-    const MEDIUM_BUTTON_1 = <div onClick={props.medium1} className={"MediumButton-1"} style={{left: `${left}%`, top: `${top}%`}}>
-        <button className="MediumButton-1__button"
-                onClick={() => setReady(false)}>
-        </button>
-    </div>
-
-    const MEDIUM_BUTTON_2 = <div onClick={props.medium2} className={"MediumButton-2"} style={{left: `${left}%`, top: `${top}%`}}>
-        <button className="MediumButton-2__button"
-                onClick={() => setReady(false)}>
-        </button>
-    </div>
-
-    const MEDIUM_BUTTON_3 = <div onClick={props.medium3} className={"MediumButton-3"} style={{left: `${left}%`, top: `${top}%`}}>
-        <button className="MediumButton-3__button"
-                onClick={() => setReady(false)}>
-        </button>
-    </div>
+        function boxReady() {
+            setReady(true)
+            setTriggerBox(Math.round(getRandomNumber(1, 3)))
+            setLeft(Math.round((Math.random() * 100)))
+            setTop(Math.round((Math.random() * 100)))
+            setTimeout(() => setReady(false), 2 * 1000)
+        }
 
 
+        useEffect(() => {
+            const interval = setInterval(boxReady, 6 * 1000)
+            return () => clearInterval(interval)
+
+        }, [triggerBox])
 
 
-    return (
-        <div className={"MAIN__MEDIUM_BUTTON"}>
-            {(ready && triggerBox === 1) && MEDIUM_BUTTON_1}
-            {(ready && triggerBox === 2) && MEDIUM_BUTTON_2}
-            {(ready && triggerBox === 3) && MEDIUM_BUTTON_3}
+        const MEDIUM_BUTTON_1 = <div onClick={props.medium1} className={"MediumButton-1"}
+                                     style={{left: `${left}%`, top: `${top}%`}}>
+            <button className="MediumButton-1__button"
+                    onClick={() => setReady(false)}>
+            </button>
         </div>
-    );
-}
 
-export default MediumBoutonBonus;
+        const MEDIUM_BUTTON_2 = <div onClick={props.medium2} className={"MediumButton-2"}
+                                     style={{left: `${left}%`, top: `${top}%`}}>
+            <button className="MediumButton-2__button"
+                    onClick={() => setReady(false)}>
+            </button>
+        </div>
+
+        const MEDIUM_BUTTON_3 = <div onClick={props.medium3} className={"MediumButton-3"}
+                                     style={{left: `${left}%`, top: `${top}%`}}>
+            <button className="MediumButton-3__button"
+                    onClick={() => setReady(false)}>
+            </button>
+        </div>
+
+
+        return ( <div className={"MAIN__MEDIUM_BUTTON"}>
+                {(ready && triggerBox === 1) && MEDIUM_BUTTON_1}
+                {(ready && triggerBox === 2) && MEDIUM_BUTTON_2}
+                {(ready && triggerBox === 3) && MEDIUM_BUTTON_3}
+            </div>
+        )
+}
