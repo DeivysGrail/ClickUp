@@ -504,19 +504,18 @@ body {
 
     }
 
-
   }
 }
 
 
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 415px) {
 
 
   .MAIN {
 
     &__INSTRUCTIONS {
 
-      width: 420px;
+      width: 400px;
       padding: 5px;
       height: 90%;
 
@@ -570,7 +569,6 @@ body {
 
     }
 
-
   }
 }
 
@@ -582,12 +580,11 @@ body {
 
     &__INSTRUCTIONS {
 
-      width: 420px;
+      width: 370px;
       padding: 5px;
       height: 90%;
 
       &__header {
-
 
         &--logo {
           width: 40%;
@@ -600,15 +597,17 @@ body {
         }
 
         &--explication {
-          text-align: center;
+
+          font-size: 1.2rem;
         }
 
       }
 
       &__bonus {
-
+        font-size: 1.1rem;
         overflow-y: scroll;
         height: 600px;
+        text-align: center;
 
         &__BONUS_CONTAINER {
           flex-direction: column;
@@ -616,6 +615,7 @@ body {
           justify-content: flex-start;
           border: none;
           padding: 10px;
+
           &--logo {
             width: 100px;
             height: 100px;
@@ -625,6 +625,8 @@ body {
           }
 
           &--text {
+            padding: 10px;
+            text-align: center;
             width: 100%;
             margin-left: 10px;
             border-bottom: solid #f1f1f1 2px;
