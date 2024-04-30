@@ -169,7 +169,7 @@ function Game(props) {
             <Score score={score} highScore={highScore}/>
             {instruction && <Instructions startGame={() => {
                 setFallingTrigger(true)
-                setBonus(true)
+                setBonus    (true)
                 setInstructions(false)
             }}/>}
             {<h1>{loose && <Loose actif={instruction} trigger={() => setInstructions(false)} score={score} highScore={highScore} tryAgain={() => location.reload()} triggerInfo={() => setInstructions(true)}/>}</h1>}
