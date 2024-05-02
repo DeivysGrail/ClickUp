@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import logo from '../../assets/logo-clickup.png'
+import logo from '../../assets/logo-SpaceCow.png'
 import '../../style/clicker.scss'
 import point_illus from "../../assets/bonus_ico/instructions_points.png"
 import temps_illus from "../../assets/bonus_ico/instructions_temps.png"
