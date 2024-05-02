@@ -12,8 +12,7 @@
 }
 
 body {
-  background: radial-gradient(circle, rgba(132, 222, 133, 1) 0%, rgba(35, 36, 36, 1) 100%);
-  //background: url("../assets/wallpaper.jpg");
+  background: url("../assets/background.jpg") no-repeat center / cover;
   height: 100vh;
   overflow: hidden;
   font-family: $Poppins;
@@ -22,7 +21,7 @@ body {
 
 .MAIN {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -37,47 +36,59 @@ body {
   }
 
   .zoneToKeepSafe {
-    background: $black-metal-light;
     top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     font-size: $fs-16;
     color: crimson;
     padding: 3px 10px;
-    border: inset white 5px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, .4);
     border-radius: $border-radius-lg;
     left: 50%;
     transform: translateX(-50%);
     width: 40vw;
+    height: 10vh;
     margin: 0 auto;
     transition: all .4s ease;
+    position: absolute;
 
-    h1 {
+    &--img {
+      transform: translateY(-20%);
+      position: relative;
+      z-index: 2;
+      width: 80%;
+      object-fit: cover;
+
       &::selection {
         background: transparent;
       }
 
     }
 
-    @media screen and (max-width: 770px) {
-      font-size: .8rem;
-      width: max-content;
 
-    }
   }
 
   .deathZone {
     color: #f1f1F1;
-    background-image: linear-gradient(67.5deg, rgb(235, 73, 66) 0%, rgb(235, 73, 66) 14%, rgb(197, 76, 57) 14%, rgb(197, 76, 57) 36%, rgb(159, 78, 48) 36%, rgb(159, 78, 48) 42%, rgb(121, 81, 39) 42%, rgb(121, 81, 39) 45%, rgb(83, 84, 29) 45%, rgb(83, 84, 29) 79%, rgb(45, 86, 20) 79%, rgb(45, 86, 20) 83%, rgb(7, 89, 11) 83%, rgb(7, 89, 11) 100%), linear-gradient(112.5deg, rgb(235, 73, 66) 0%, rgb(235, 73, 66) 14%, rgb(197, 76, 57) 14%, rgb(197, 76, 57) 36%, rgb(159, 78, 48) 36%, rgb(159, 78, 48) 42%, rgb(121, 81, 39) 42%, rgb(121, 81, 39) 45%, rgb(83, 84, 29) 45%, rgb(83, 84, 29) 79%, rgb(45, 86, 20) 79%, rgb(45, 86, 20) 83%, rgb(7, 89, 11) 83%, rgb(7, 89, 11) 100%), linear-gradient(22.5deg, rgb(235, 73, 66) 0%, rgb(235, 73, 66) 14%, rgb(197, 76, 57) 14%, rgb(197, 76, 57) 36%, rgb(159, 78, 48) 36%, rgb(159, 78, 48) 42%, rgb(121, 81, 39) 42%, rgb(121, 81, 39) 45%, rgb(83, 84, 29) 45%, rgb(83, 84, 29) 79%, rgb(45, 86, 20) 79%, rgb(45, 86, 20) 83%, rgb(7, 89, 11) 83%, rgb(7, 89, 11) 100%), linear-gradient(301deg, rgb(235, 73, 66) 0%, rgb(235, 73, 66) 14%, rgb(197, 76, 57) 14%, rgb(197, 76, 57) 36%, rgb(159, 78, 48) 36%, rgb(159, 78, 48) 42%, rgb(121, 81, 39) 42%, rgb(121, 81, 39) 45%, rgb(83, 84, 29) 45%, rgb(83, 84, 29) 79%, rgb(45, 86, 20) 79%, rgb(45, 86, 20) 83%, rgb(7, 89, 11) 83%, rgb(7, 89, 11) 100%), linear-gradient(301deg, rgb(169, 5, 29), rgb(51, 13, 59));
-    background-blend-mode: overlay, overlay, overlay, overlay, normal;
+    background-size: 1%;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     border-radius: $border-radius-m;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    h1 {
+    &--img {
+      position: relative;
+      width: 40px;
+      z-index: 0;
 
-      &::selection {
-        background: transparent;
+      &.deadCow {
+        transform: translateY(-400%) rotate(1080deg) rotateY(1080deg);
+        opacity: 0;
+        transition: transform 5s linear, opacity 1.1s linear;
       }
     }
 
@@ -273,18 +284,14 @@ body {
   }
 
   &__SCORE {
-    margin-top: 20px;
-    margin-left: 20px;
-    padding: 30px;
+    padding: 20px;
     position: relative;
     color: #f1f1f1;
     text-align: left;
 
-    &--score {
-    }
 
     &--highScore {
-      font-size: 1rem;
+      font-size: $fs-16;
     }
 
   }
@@ -297,41 +304,53 @@ body {
     text-align: center;
     width: 100%;
     inset: 0;
-    color: crimson;
+    font-size: $fs-24;
     position: absolute;
     z-index: 300;
     height: 100vh;
-    background: #1e1e1e;
+    background: transparent;
     margin: 0 auto;
     overflow: hidden;
 
 
-    @media screen and (max -width: 500px) {
-      font-size: 1.3rem;
-    }
-
     &--text {
-      text-decoration: underline crimson 10px;
+      color: #f1f1f1;
+      background: rgba(40, 36, 36, 0.59);
+      border-top-left-radius: $border-radius-xxl;
+      border-top-right-radius: $border-radius-xxl;
+      padding: 20px 30px;
+      backdrop-filter: blur(20px);
     }
 
     &--score {
-
+      color: #f1f1f1;
+      background: rgba(40, 36, 36, 0.59);
+      border-radius: $border-radius-xl;
+      padding: 20px 30px;
+      backdrop-filter: blur(20px);
     }
 
     &--highScore {
       margin-bottom: 20px;
+      color: #f1f1f1;
+    border-bottom-left-radius: $border-radius-lg;
+    border-bottom-right-radius: $border-radius-lg;
+      background: rgba(40, 36, 36, 0.59);
+      padding: 20px 30px;
+      backdrop-filter: blur(20px);
     }
 
     &--button {
-      padding: 5px 10px;
+      padding: 5px 20px;
       height: 50px;
       border-radius: 5px;
-      border: none;
+      border: solid  #f1f1f1 1px;
       letter-spacing: 2px;
       width: max-content;
-      background: crimson;
+      background: #1e1e1e;
       font-weight: bold;
-    }
+      color: #f1f1f1;
+      }
 
     &--openButton {
       top: 0;
@@ -361,13 +380,14 @@ body {
 
   &__INSTRUCTIONS {
     position: relative;
-    width: 900px;
+    width: 800px;
+    top: 50%;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     border: solid white 4px;
     border-radius: $border-radius-xxl;
-    transform: translateY(-15%);
+    transform: translateY(-60%);
     background: #1f1f1e;
     //height: max-content;
     color: #f1f1f1;
@@ -552,6 +572,7 @@ body {
           justify-content: flex-start;
           border: none;
           padding: 10px;
+
           &--logo {
             width: 100px;
             height: 100px;
@@ -576,10 +597,10 @@ body {
 }
 
 
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 775px) {
 
 
-  .MAIN {
+  .MAIN   {
 
     &__LOOSE {
       &--closeButton {
@@ -591,20 +612,24 @@ body {
 
     &__INSTRUCTIONS {
 
-      width: 370px;
+      width: 80vw;
       padding: 5px;
       height: 80%;
-
       &__header {
 
         &--logo {
-          width: 40%;
-          margin-bottom: 20px;
+          width: 30%;
+          //margin-bottom: 20px;
+          margin: 0 auto;
         }
 
         &--text {
           margin-top: 10px;
           font-size: 1.4rem;
+        }
+
+        &--span {
+          display: block;
         }
 
         &--explication {
@@ -650,4 +675,145 @@ body {
     }
 
   }
+}
+
+@media screen and (max-width: 525px) {
+
+  .MAIN__INSTRUCTIONS {
+
+    &__header {
+
+    &--explication {
+    font-size: $fs-16;
+      text-align: center;
+    }
+
+    }
+
+    &__bonus {
+
+
+      &__BONUS_CONTAINER {
+
+        &--logo {
+          width: 100px;
+          height: 100px;
+          aspect-ratio: 1;
+          border: none;
+          margin: 10px 0;
+        }
+
+        &--text {
+          font-size: $fs-16;
+        }
+
+      }
+    }
+
+  }
+
+}
+
+// Taille de l'ovni est de la vache
+
+
+@media screen and (max-width: 1024px) {
+
+
+  #VACHE {
+
+  }
+
+  #OVNI {
+    transform: translateY(-15%);
+  }
+
+
+}
+
+@media screen and (max-width: 800px) {
+
+
+  #VACHE {
+    width: 30px;
+  }
+
+  #OVNI {
+    transform: translateY(-10%);
+  }
+
+
+}
+
+@media screen and (max-width: 770px) {
+
+
+  #VACHE {
+    width: 25px;
+  }
+
+  #OVNI {
+    //  transform: translateY(-10%);
+    width: 90%;
+  }
+
+
+}
+
+@media screen and (max-width: 770px) {
+
+
+  #OVNI {
+    //  transform: translateY(-10%);
+    width: 200%;
+  }
+
+
+}
+
+//Taille de l'écran de défaite
+
+@media screen and (max-width: 960px) {
+
+  .MAIN__LOOSE {
+
+    font-size: $fs-20;
+  }
+
+}
+
+// Gestion de l'affichage du score
+
+@media screen and (max-width: 768px) {
+
+.MAIN__SCORE {
+
+  &--score {
+    font-size: $fs-24;}
+  &--highScore {
+    font-size: $fs-18;}
+}
+
+}
+@media screen and (max-width: 530px) {
+
+.MAIN__SCORE {
+
+  &--score {
+    font-size: $fs-20;}
+  &--highScore {
+    font-size: $fs-16;}
+}
+
+}
+@media screen and (max-width: 375px) {
+
+.MAIN__SCORE {
+
+  &--score {
+    font-size: $fs-18;}
+  &--highScore {
+    font-size: $fs-14;}
+}
+
 }

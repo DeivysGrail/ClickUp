@@ -1,3 +1,5 @@
+import cow from './assets/cow.png'
+import ovni from './assets/ovni.png'
 import Score from "./components/Score.jsx";
 import './style/clicker.scss'
 import React, {useEffect, useRef, useState} from "react";
@@ -6,6 +8,7 @@ import MediumBoutonBonus from "./components/MediumBoutonBonus.jsx";
 import HardBoutonBonus from "./components/HardBoutonBonus.jsx";
 import Loose from "./components/Loose.jsx";
 import Instructions from "./components/Instructions/Instructions.jsx";
+
 function Game(props) {
 
     function getRandomSpeed(min, max) {
@@ -18,16 +21,17 @@ function Game(props) {
     const [pixel, setPixel] = useState(1.2)
     let [score, setScore] = useState(0)
     const [highScore, setHighScore] = useState(localStorage.getItem('score'))
-    let [translationY, setTranslationY] = useState(0)
+    let [translationY, setTranslationY] = useState(2)
     const [fallingTrigger, setFallingTrigger] = useState(false)
     const [pause, setPause] = useState(false)
     const [loose, setLoose] = useState(false)
-    const [medium, setMedium] = useState(false)
+    const [medium, setMedium] = useState(true)
     const [hard, setHard] = useState(true)
     const [instruction, setInstructions] = useState(true)
-    const [bonus, setBonus] = useState(false)
-    useEffect(() => {
+    const [bonus, setBonus] = useState(true)
+    const vacheRef = useRef()
 
+    useEffect(() => {
         checkCollision(KEEP_SAFE_ZONE_REF.current, DEATH_ZONE_REF.current)
         const interval = setInterval(down, speed);
         return () => clearInterval(interval);
@@ -63,17 +67,16 @@ function Game(props) {
         } else if (score >= 3 && score <= 20) {
             setSpeed(getRandomSpeed(350, 350))
         } else if (score >= 21 && score <= 50) {
-            setSpeed(getRandomSpeed(300, 300))
-            setPixel(7)
+            setSpeed(getRandomSpeed(130, 160))
+            setPixel(3)
         } else if (score >= 51 && score <= 55) {
             setSpeed(getRandomSpeed(40, 60))
         } else if (score >= 56 && score <= 99) {
             setSpeed(getRandomSpeed(220, 230))
         } else if (score >= 100 && score <= 120) {
-            setFallingTrigger(false)
-            setPixel(2.4)
+            setSpeed(getRandomSpeed(280, 320))
+            setPixel(2)
         } else if (score >= 121 && score <= 129) {
-            setFallingTrigger(true)
             setSpeed(getRandomSpeed(70, 90))
             setPixel(1.5)
         } else if (score >= 130 && score <= 189) {
@@ -81,12 +84,12 @@ function Game(props) {
         } else if (score >= 190 && score <= 199) {
             setSpeed(getRandomSpeed(30, 40))
         } else if (score >= 200 && score <= 220) {
-            setSpeed(getRandomSpeed(200, 310))
+            setSpeed(getRandomSpeed(120, 140))
         } else if (score >= 221 && score <= 250) {
             setSpeed(getRandomSpeed(80, 100))
         } else if (score >= 250 && score <= 300) {
             const last_interval = setInterval(() => {
-                setSpeed(getRandomSpeed(60, 280))
+                setSpeed(getRandomSpeed(60, 240))
                 clearInterval(last_interval)
             }, 1 * 1000)
         } else if (score >= 301 && score <= 320) {
@@ -101,14 +104,14 @@ function Game(props) {
             }, 2.2 * 1000)
         } else if (score >= 372 && score <= 400) {
             const last_interval = setInterval(() => {
-                setSpeed(getRandomSpeed(100, 200))
+                setSpeed(getRandomSpeed(100, 150))
                 clearInterval(last_interval)
             }, 3 * 1000)
         } else if (score >= 401) {
             const last_interval = setInterval(() => {
-                setSpeed(getRandomSpeed(60, 140))
+                setSpeed(getRandomSpeed(60, 120))
                 clearInterval(last_interval)
-            }, 4 * 1000)
+            }, 3.3 * 1000)
         }
 
 
@@ -139,16 +142,11 @@ function Game(props) {
             // La div KEEP_SAFE a atteint ou dépassé la div DEATH_ZONE
             // Vous pouvez exécuter votre fonction ici
             // Exemple d'exécution d'une fonction
-            deathZone.style.border = 'inset red 10px'
-            deathZone.style.background = 'black'
-            deathZone.style.color = 'red'
-            deathZone.style.borderBottom = 'none'
-            setFallingTrigger(false)
+            vacheRef.current.classList.add('deadCow')
             setBonus(false)
+            setFallingTrigger(false)
             setLoose(true)
             saveScore()
-
-            // setTimeout(() => alert('perdu'), .1 * 1000)
         } else {
             // La collision n'a pas encore eu lieu, vérifiez à nouveau dans 1 seconde
             setTimeout(checkCollision, 100); // Vérifiez toutes les secondes
@@ -168,10 +166,12 @@ function Game(props) {
             <Score score={score} highScore={highScore}/>
             {instruction && <Instructions startGame={() => {
                 setFallingTrigger(true)
-                setBonus    (true)
+                setBonus(true)
                 setInstructions(false)
             }}/>}
-            {<h1>{loose && <Loose actif={instruction} trigger={() => setInstructions(false)} score={score} highScore={highScore} tryAgain={() => location.reload()} triggerInfo={() => setInstructions(true)}/>}</h1>}
+            {<h1>{loose &&
+                <Loose actif={instruction} trigger={() => setInstructions(false)} score={score} highScore={highScore}
+                       tryAgain={() => location.reload()} triggerInfo={() => setInstructions(true)}/>}</h1>}
             {(medium && bonus) && <MediumBoutonBonus medium1={() => setScore(score += 19)} medium2={() => {
                 setFallingTrigger(false)
                 setTimeout(() => setFallingTrigger(true), 5 * 1000)
@@ -196,10 +196,10 @@ function Game(props) {
             {/*<h1>{Math.round(speed)}/ms</h1>*/}
             {/*<h1>safe_zone + {pixel} by click</h1>*/}
             <div ref={KEEP_SAFE_ZONE_REF} style={{top: translationY + "px"}} className="zone-in zoneToKeepSafe">
-                <h1>ZONE À DÉFENDRE</h1>
+                <img id={"OVNI"} className={"zoneToKeepSafe--img"} src={ovni} alt=""/>
             </div>
             <div ref={DEATH_ZONE_REF} className="zone-in deathZone">
-                <h1>DEATH ZONE</h1>
+                <img id={"VACHE"} className={"deathZone--img"} src={cow} ref={vacheRef}/>
             </div>
         </div>
 

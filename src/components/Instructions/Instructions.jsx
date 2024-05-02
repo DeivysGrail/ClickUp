@@ -12,8 +12,8 @@ function Instructions(props) {
             <div className="MAIN__INSTRUCTIONS__header">
                 <img className="MAIN__INSTRUCTIONS__header--logo" src={logo} alt=""/>
                 <h1 className="MAIN__INSTRUCTIONS__header--text">BIENVENUE SUR ClickUp</h1>
-                <p className="MAIN__INSTRUCTIONS__header--explication"><b>But du jeu</b> : Empêcher la <i>'zone à défendre'</i> de
-                    toucher la <i>'DeathZone'</i></p>
+                <p className="MAIN__INSTRUCTIONS__header--explication"><span className={"MAIN__INSTRUCTIONS__header--span"}><b>But du jeu :</b></span> Empêcher la vache de
+                    se faire capturer</p>
             </div>
             <div className={`MAIN__INSTRUCTIONS__bonus`}>
                 <p className="MAIN__INSTRUCTIONS__bonus--description">- Des bonus apparaîssent pendant la partie pour t'aider.
@@ -24,13 +24,13 @@ function Instructions(props) {
                 <div className="MAIN__INSTRUCTIONS__bonus__StopTime MAIN__INSTRUCTIONS__bonus__BONUS_CONTAINER">
                     <img className={"MAIN__INSTRUCTIONS__bonus__BONUS_CONTAINER--logo"} src={temps_illus} alt=""/>
                     <p className={"MAIN__INSTRUCTIONS__bonus__BONUS_CONTAINER--text"}>Les bonus de temps te permettent
-                        d'arrêter la chute de la barre pendant 3, 5 ou 8 secondes.</p>
+                        d'arrêter la chute de l'ovni pendant 3, 5 ou 8 secondes.</p>
 
                 </div>
                 <div className="MAIN__INSTRUCTIONS__bonus__PixelUp MAIN__INSTRUCTIONS__bonus__BONUS_CONTAINER">
                     <img className={"MAIN__INSTRUCTIONS__bonus__BONUS_CONTAINER--logo"} src={pixel_illus} alt=""/>
                     <p className={"MAIN__INSTRUCTIONS__bonus__BONUS_CONTAINER--text"}>Les bonus de pixels te permettent de
-                        monter de 5, 10 ou 20 pixels par clique au lieu de 2.</p>
+                        remonter l'ovni de 5, 10 ou 20 pixels par clique au lieu de 2.</p>
 
                 </div>
                 <div className="MAIN__INSTRUCTIONS__bonus__BonusPoint MAIN__INSTRUCTIONS__bonus__BONUS_CONTAINER">
