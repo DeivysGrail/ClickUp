@@ -47,7 +47,7 @@ export default function MediumBoutonBonus(props) {
                     onClick={() => setReady(false)}>
             </button>
         </div>
-
+    
         const MEDIUM_BUTTON_2 = <div onClick={props.medium2} className={"MediumButton-2"}
                                      style={{left: `${left}%`, top: `${top}%`}}>
             <button className="MediumButton-2__button"
