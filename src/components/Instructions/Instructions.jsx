@@ -12,8 +12,7 @@ function Instructions(props) {
             <div className="MAIN__INSTRUCTIONS__header">
                 <img className="MAIN__INSTRUCTIONS__header--logo" src={logo} alt=""/>
                 <h1 className="MAIN__INSTRUCTIONS__header--text">BIENVENUE SUR ClickUp</h1>
-                <p className="MAIN__INSTRUCTIONS__header--explication"><b>But du jeu</b> : Empêcher la <i>'zone à défendre'</i> de
-                    toucher la <i>'DeathZone'</i></p>
+                <p className="MAIN__INSTRUCTIONS__header--explication"><b>But du jeu</b> : Empêcher la vache de se faire enlever</p>
             </div>
             <div className={`MAIN__INSTRUCTIONS__bonus`}>
                 <p className="MAIN__INSTRUCTIONS__bonus--description">- Des bonus apparaîssent pendant la partie pour t'aider.

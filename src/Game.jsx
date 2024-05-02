@@ -1,3 +1,5 @@
+import cow from './assets/cow.png'
+import ovni from './assets/ovni.png'
 import Score from "./components/Score.jsx";
 import './style/clicker.scss'
 import React, {useEffect, useRef, useState} from "react";
@@ -26,6 +28,8 @@ function Game(props) {
     const [hard, setHard] = useState(true)
     const [instruction, setInstructions] = useState(true)
     const [bonus, setBonus] = useState(false)
+    const vacheRef = useRef()
+
     useEffect(() => {
 
         checkCollision(KEEP_SAFE_ZONE_REF.current, DEATH_ZONE_REF.current)
@@ -129,7 +133,6 @@ function Game(props) {
 
     function checkCollision(safeZone, deathZone) {
 
-
         const keepSafeRect = safeZone.getBoundingClientRect();
         const deathZoneRect = deathZone.getBoundingClientRect();
         if (keepSafeRect.top < 0) {
@@ -139,10 +142,9 @@ function Game(props) {
             // La div KEEP_SAFE a atteint ou dépassé la div DEATH_ZONE
             // Vous pouvez exécuter votre fonction ici
             // Exemple d'exécution d'une fonction
-            deathZone.style.border = 'inset red 10px'
-            deathZone.style.background = 'black'
-            deathZone.style.color = 'red'
-            deathZone.style.borderBottom = 'none'
+
+            // alert('perdu')
+            vacheRef.current.style.transform = 'translateY(-10%)'
             setFallingTrigger(false)
             setBonus(false)
             setLoose(true)
@@ -196,10 +198,10 @@ function Game(props) {
             {/*<h1>{Math.round(speed)}/ms</h1>*/}
             {/*<h1>safe_zone + {pixel} by click</h1>*/}
             <div ref={KEEP_SAFE_ZONE_REF} style={{top: translationY + "px"}} className="zone-in zoneToKeepSafe">
-                <h1>ZONE À DÉFENDRE</h1>
+                <img className={"zoneToKeepSafe--ovni"} src={ovni} alt=""/>
             </div>
             <div ref={DEATH_ZONE_REF} className="zone-in deathZone">
-                <h1>DEATH ZONE</h1>
+                <img ref={vacheRef} className={"deathZone--cow"} src={cow}/>
             </div>
         </div>
 

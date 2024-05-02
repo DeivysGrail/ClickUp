@@ -13,7 +13,7 @@
   box-sizing: border-box; }
 
 body {
-  background: radial-gradient(circle, #84de85 0%, #232424 100%);
+  background: url("../assets/background.jpg");
   height: 100vh;
   overflow: hidden;
   font-family: Poppins, sans-serif; }
@@ -31,35 +31,37 @@ body {
     position: absolute;
     width: 100%; }
   .MAIN .zoneToKeepSafe {
-    background: #191f22;
     top: 0;
-    font-size: 1rem;
-    color: crimson;
-    padding: 3px 10px;
-    border: inset white 5px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
-    border-radius: 0.5rem;
+    padding: 3px;
     left: 50%;
     transform: translateX(-50%);
-    width: 40vw;
+    width: max-content;
     margin: 0 auto;
-    transition: all .4s ease; }
-    .MAIN .zoneToKeepSafe h1::selection {
-      background: transparent; }
+    transition: all .4s ease;
+    height: 230px; }
+    .MAIN .zoneToKeepSafe--ovni {
+      width: 500px;
+      position: relative;
+      height: 320px; }
+      .MAIN .zoneToKeepSafe--ovni::selection {
+        background: transparent; }
     @media screen and (max-width: 770px) {
       .MAIN .zoneToKeepSafe {
         font-size: .8rem;
         width: max-content; } }
   .MAIN .deathZone {
     color: #f1f1F1;
-    background-image: linear-gradient(67.5deg, #eb4942 0%, #eb4942 14%, #c54c39 14%, #c54c39 36%, #9f4e30 36%, #9f4e30 42%, #795127 42%, #795127 45%, #53541d 45%, #53541d 79%, #2d5614 79%, #2d5614 83%, #07590b 83%, #07590b 100%), linear-gradient(112.5deg, #eb4942 0%, #eb4942 14%, #c54c39 14%, #c54c39 36%, #9f4e30 36%, #9f4e30 42%, #795127 42%, #795127 45%, #53541d 45%, #53541d 79%, #2d5614 79%, #2d5614 83%, #07590b 83%, #07590b 100%), linear-gradient(22.5deg, #eb4942 0%, #eb4942 14%, #c54c39 14%, #c54c39 36%, #9f4e30 36%, #9f4e30 42%, #795127 42%, #795127 45%, #53541d 45%, #53541d 79%, #2d5614 79%, #2d5614 83%, #07590b 83%, #07590b 100%), linear-gradient(301deg, #eb4942 0%, #eb4942 14%, #c54c39 14%, #c54c39 36%, #9f4e30 36%, #9f4e30 42%, #795127 42%, #795127 45%, #53541d 45%, #53541d 79%, #2d5614 79%, #2d5614 83%, #07590b 83%, #07590b 100%), linear-gradient(301deg, #a9051d, #330d3b);
-    background-blend-mode: overlay, overlay, overlay, overlay, normal;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 0.25rem; }
-    .MAIN .deathZone h1::selection {
-      background: transparent; }
+    .MAIN .deathZone--cow {
+      position: relative;
+      z-index: 1;
+      width: 40px;
+      transition: all .2s ease-out; }
+      .MAIN .deathZone--cow::selection {
+        background: transparent; }
   .MAIN__EASY_BUTTON {
     height: 90%;
     width: 90%;
