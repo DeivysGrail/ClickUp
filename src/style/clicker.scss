@@ -109,7 +109,7 @@ body {
         width: 100px;
         border-radius: 100%;
         height: 100px;
-        background: url("../assets/bonus_ico/10pt_large.png");
+        background: url("../assets/bonus_ico/Points_10.png");
         background-size: cover;
         clip-path: circle(50%);
         border: none;
@@ -120,15 +120,12 @@ body {
       position: absolute;
       z-index: 2;
 
-      z-index: 2;
 
       &__button {
+
         width: 100px;
-        border-radius: 100%;
         height: 100px;
-        background: url("../assets/bonus_ico/3s_large.png");
-        background-size: cover;
-        clip-path: circle(50%);
+        background: url("../assets/bonus_ico/StopTime3s.png") no-repeat center / contain;
         border: none;
 
       }
@@ -145,7 +142,7 @@ body {
         width: 70px;
         border-radius: 100%;
         height: 60px;
-        background: url("../assets/bonus_ico/5px_large.png") no-repeat;
+        background: url("../assets/bonus_ico/PixelUp5.png") no-repeat;
         background-size: contain;
         clip-path: circle(50%);
         border: none;
@@ -171,7 +168,7 @@ body {
         width: 100px;
         border-radius: 100%;
         height: 100px;
-        background: url("../assets/bonus_ico/20pt_large.png");
+        background: url("../assets/bonus_ico/Points_20.png");
         background-size: cover;
         clip-path: circle(50%);
         border: none;
@@ -185,11 +182,8 @@ body {
 
       &__button {
         width: 100px;
-        border-radius: 100%;
         height: 100px;
-        background: url("../assets/bonus_ico/5s_large.png");
-        background-size: cover;
-        clip-path: circle(50%);
+        background: url("../assets/bonus_ico/StopTime5s.png") no-repeat center / contain;
         border: none;
 
 
@@ -207,7 +201,7 @@ body {
         width: 90px;
         border-radius: 100%;
         height: 80px;
-        background: url("../assets/bonus_ico/10px_large.png") no-repeat;
+        background: url("../assets/bonus_ico/PixelUp10.png") no-repeat;
         background-size: contain;
         clip-path: circle(50%);
         border: none;
@@ -235,7 +229,7 @@ body {
         width: 60px;
         border-radius: 100%;
         height: 60px;
-        background: url("../assets/bonus_ico/30pt_large.png");
+        background: url("../assets/bonus_ico/Points_30.png");
         background-size: cover;
         clip-path: circle(50%);
         border: none;
@@ -249,11 +243,8 @@ body {
 
       &__button {
         width: 50px;
-        border-radius: 100%;
         height: 50px;
-        background: url("../assets/bonus_ico/8s_large.png");
-        background-size: cover;
-        clip-path: circle(50%);
+        background: url("../assets/bonus_ico/StopTime8s.png") no-repeat center / contain;
         border: none;
 
 
@@ -271,7 +262,7 @@ body {
         width: 70px;
         border-radius: 100%;
         height: 60px;
-        background: url("../assets/bonus_ico/20px_large.png") no-repeat;
+        background: url("../assets/bonus_ico/PixelUp20.png") no-repeat;
         background-size: contain;
         clip-path: circle(50%);
         border: none;
@@ -489,7 +480,9 @@ body {
       &__header {
 
 
-        
+        &--logo {
+          //width: 20%;
+        }
 
         &--text {
           margin-top: 10px;
@@ -813,5 +806,196 @@ body {
   &--highScore {
     font-size: $fs-14;}
 }
+
+}
+
+// Taille des icônes bonus
+
+@media screen and (max-width: 770px) {
+
+
+  .MAIN {
+
+    &__EASY_BUTTON {
+      height: 90%;
+      width: 90%;
+      margin: 0 auto;
+
+
+      .EasyButton-1 {
+        position: absolute;
+        z-index: 2;
+
+        &__button {
+          width: 80px;
+          border-radius: 100%;
+          height: 80px;
+          background: url("../assets/bonus_ico/Points_10.png");
+          background-size: cover;
+          clip-path: circle(50%);
+          border: none;
+        }
+      }
+
+      .EasyButton-2 {
+        position: absolute;
+        z-index: 2;
+
+
+        &__button {
+
+          width: 80px;
+          height: 80px;
+          background: url("../assets/bonus_ico/StopTime3s.png") no-repeat center / contain;
+          border: none;
+
+        }
+
+
+      }
+
+      .EasyButton-3 {
+        position: absolute;
+        z-index: 2;
+
+
+        &__button {
+          width: 80px;
+          border-radius: 100%;
+          height: 80px;
+          background: url("../assets/bonus_ico/PixelUp5.png") no-repeat;
+          background-size: contain;
+          clip-path: circle(50%);
+          border: none;
+
+        }
+
+      }
+
+
+    }
+
+    &__MEDIUM_BUTTON {
+      height: 90%;
+      width: 90%;
+      margin: 0 auto;
+
+      .MediumButton-1 {
+        position: absolute;
+        z-index: 2;
+
+
+        &__button {
+          width: 70px;
+          border-radius: 100%;
+          height: 70px;
+          background: url("../assets/bonus_ico/Points_20.png");
+          background-size: cover;
+          clip-path: circle(50%);
+          border: none;
+        }
+      }
+
+      .MediumButton-2 {
+        position: absolute;
+        z-index: 2;
+
+
+        &__button {
+          width: 70px;
+          height: 70px;
+          background: url("../assets/bonus_ico/StopTime5s.png") no-repeat center / contain;
+          border: none;
+
+
+        }
+
+
+      }
+
+      .MediumButton-3 {
+        position: absolute;
+        z-index: 2;
+
+
+        &__button {
+          width: 70px;
+          border-radius: 100%;
+          height: 70px;
+          background: url("../assets/bonus_ico/PixelUp10.png") no-repeat;
+          background-size: contain;
+          clip-path: circle(50%);
+          border: none;
+
+
+        }
+
+      }
+
+
+    }
+
+    &__HARD_BUTTON {
+      height: 90%;
+      width: 90%;
+      margin: 0 auto;
+
+
+      .HardButton-1 {
+        position: absolute;
+        z-index: 2;
+
+
+        &__button {
+          width: 50px;
+          border-radius: 100%;
+          height: 50px;
+          background: url("../assets/bonus_ico/Points_30.png");
+          background-size: cover;
+          clip-path: circle(50%);
+          border: none;
+        }
+      }
+
+      .HardButton-2 {
+        position: absolute;
+        z-index: 2;
+
+
+        &__button {
+          width: 50px;
+          height: 50px;
+          background: url("../assets/bonus_ico/StopTime8s.png") no-repeat center / contain;
+          border: none;
+
+
+        }
+
+
+      }
+
+      .HardButton-3 {
+        position: absolute;
+        z-index: 2;
+
+
+        &__button {
+          width: 50px;
+          border-radius: 100%;
+          height: 50px;
+          background: url("../assets/bonus_ico/PixelUp20.png") no-repeat;
+          background-size: contain;
+          clip-path: circle(50%);
+          border: none;
+
+
+        }
+
+      }
+
+    }
+
+
+  }
 
 }
