@@ -16,7 +16,7 @@ function Game(props) {
     }
 
     const KEEP_SAFE_ZONE_REF = useRef()
-    const DEATH_ZONE_REF = useRef(); // Zone à ne pas atteindre
+    const DEATH_ZONE_REF = useRef();
     let [speed, setSpeed] = useState(getRandomSpeed(400, 500))
     const [pixel, setPixel] = useState(1.2)
     let [score, setScore] = useState(0)
@@ -139,17 +139,13 @@ function Game(props) {
             setTranslationY(200)
         }
         if (keepSafeRect.bottom >= deathZoneRect.top) {
-            // La div KEEP_SAFE a atteint ou dépassé la div DEATH_ZONE
-            // Vous pouvez exécuter votre fonction ici
-            // Exemple d'exécution d'une fonction
             vacheRef.current.classList.add('deadCow')
             setBonus(false)
             setFallingTrigger(false)
             setLoose(true)
             saveScore()
         } else {
-            // La collision n'a pas encore eu lieu, vérifiez à nouveau dans 1 seconde
-            setTimeout(checkCollision, 100); // Vérifiez toutes les secondes
+            setTimeout(checkCollision, 100); // Vérifie toutes les secondes
         }
     }
 

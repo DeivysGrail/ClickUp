@@ -10,7 +10,8 @@ function EasyBoutonBonus(props) {
 
 
 
-    const [triggerBox, setTriggerBox] = useState(function () {
+
+     const [triggerBox, setTriggerBox] = useState(function () {
 
         setTimeout(() => {
             return null
@@ -19,7 +20,7 @@ function EasyBoutonBonus(props) {
         return Math.round(getRandomNumber(1, 2))
 
     })
-    const [ready, setReady] = useState(false)
+    const [ready, setReady] = useState(true)
     const [left, setLeft] = useState(Math.round((Math.random() * 80)))
     const [top, setTop] = useState(Math.round((Math.random() * 80)))
 
@@ -31,7 +32,6 @@ function EasyBoutonBonus(props) {
         setTimeout(() => setReady(false), 3 * 1000)
     }
 
-    //
     useEffect(() => {
         const interval = setInterval(boxReady, 3 * 1000)
         return () => clearInterval(interval)

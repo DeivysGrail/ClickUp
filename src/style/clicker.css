@@ -13,7 +13,7 @@
   box-sizing: border-box; }
 
 body {
-  background: url("../assets/background.jpg") no-repeat center/cover;
+  background: url("../assets/clickuUp_bg.jpg") no-repeat center/cover;
   height: 100vh;
   overflow: hidden;
   font-family: Poppins, sans-serif; }
@@ -84,21 +84,17 @@ body {
         width: 100px;
         border-radius: 100%;
         height: 100px;
-        background: url("../assets/bonus_ico/10pt_large.png");
+        background: url("../assets/bonus_ico/Points_10.png");
         background-size: cover;
         clip-path: circle(50%);
         border: none; }
     .MAIN__EASY_BUTTON .EasyButton-2 {
       position: absolute;
-      z-index: 2;
       z-index: 2; }
       .MAIN__EASY_BUTTON .EasyButton-2__button {
         width: 100px;
-        border-radius: 100%;
         height: 100px;
-        background: url("../assets/bonus_ico/3s_large.png");
-        background-size: cover;
-        clip-path: circle(50%);
+        background: url("../assets/bonus_ico/StopTime3s.png") no-repeat center/contain;
         border: none; }
     .MAIN__EASY_BUTTON .EasyButton-3 {
       position: absolute;
@@ -107,7 +103,7 @@ body {
         width: 70px;
         border-radius: 100%;
         height: 60px;
-        background: url("../assets/bonus_ico/5px_large.png") no-repeat;
+        background: url("../assets/bonus_ico/PixelUp5.png") no-repeat;
         background-size: contain;
         clip-path: circle(50%);
         border: none; }
@@ -122,7 +118,7 @@ body {
         width: 100px;
         border-radius: 100%;
         height: 100px;
-        background: url("../assets/bonus_ico/20pt_large.png");
+        background: url("../assets/bonus_ico/Points_20.png");
         background-size: cover;
         clip-path: circle(50%);
         border: none; }
@@ -131,11 +127,8 @@ body {
       z-index: 2; }
       .MAIN__MEDIUM_BUTTON .MediumButton-2__button {
         width: 100px;
-        border-radius: 100%;
         height: 100px;
-        background: url("../assets/bonus_ico/5s_large.png");
-        background-size: cover;
-        clip-path: circle(50%);
+        background: url("../assets/bonus_ico/StopTime5s.png") no-repeat center/contain;
         border: none; }
     .MAIN__MEDIUM_BUTTON .MediumButton-3 {
       position: absolute;
@@ -144,7 +137,7 @@ body {
         width: 90px;
         border-radius: 100%;
         height: 80px;
-        background: url("../assets/bonus_ico/10px_large.png") no-repeat;
+        background: url("../assets/bonus_ico/PixelUp10.png") no-repeat;
         background-size: contain;
         clip-path: circle(50%);
         border: none; }
@@ -159,7 +152,7 @@ body {
         width: 60px;
         border-radius: 100%;
         height: 60px;
-        background: url("../assets/bonus_ico/30pt_large.png");
+        background: url("../assets/bonus_ico/Points_30.png");
         background-size: cover;
         clip-path: circle(50%);
         border: none; }
@@ -168,11 +161,8 @@ body {
       z-index: 2; }
       .MAIN__HARD_BUTTON .HardButton-2__button {
         width: 50px;
-        border-radius: 100%;
         height: 50px;
-        background: url("../assets/bonus_ico/8s_large.png");
-        background-size: cover;
-        clip-path: circle(50%);
+        background: url("../assets/bonus_ico/StopTime8s.png") no-repeat center/contain;
         border: none; }
     .MAIN__HARD_BUTTON .HardButton-3 {
       position: absolute;
@@ -181,7 +171,7 @@ body {
         width: 70px;
         border-radius: 100%;
         height: 60px;
-        background: url("../assets/bonus_ico/20px_large.png") no-repeat;
+        background: url("../assets/bonus_ico/PixelUp20.png") no-repeat;
         background-size: contain;
         clip-path: circle(50%);
         border: none; }
@@ -277,7 +267,7 @@ body {
       flex-direction: column;
       align-items: center; }
       .MAIN__INSTRUCTIONS__header--logo {
-        width: 15%; }
+        width: 30%; }
       .MAIN__INSTRUCTIONS__header--explication {
         font-size: 1.1rem;
         padding: 10px; }
@@ -315,8 +305,6 @@ body {
 @media screen and (max-width: 910px) {
   .MAIN__INSTRUCTIONS {
     width: 600px; }
-    .MAIN__INSTRUCTIONS__header--logo {
-      width: 20%; }
     .MAIN__INSTRUCTIONS__header--text {
       margin-top: 10px;
       font-size: 1.4rem; }
@@ -454,5 +442,108 @@ body {
     font-size: 1.125rem; }
   .MAIN__SCORE--highScore {
     font-size: 0.8rem; } }
+@media screen and (max-width: 770px) {
+  .MAIN__EASY_BUTTON {
+    height: 90%;
+    width: 90%;
+    margin: 0 auto; }
+    .MAIN__EASY_BUTTON .EasyButton-1 {
+      position: absolute;
+      z-index: 2; }
+      .MAIN__EASY_BUTTON .EasyButton-1__button {
+        width: 80px;
+        border-radius: 100%;
+        height: 80px;
+        background: url("../assets/bonus_ico/Points_10.png");
+        background-size: cover;
+        clip-path: circle(50%);
+        border: none; }
+    .MAIN__EASY_BUTTON .EasyButton-2 {
+      position: absolute;
+      z-index: 2; }
+      .MAIN__EASY_BUTTON .EasyButton-2__button {
+        width: 80px;
+        height: 80px;
+        background: url("../assets/bonus_ico/StopTime3s.png") no-repeat center/contain;
+        border: none; }
+    .MAIN__EASY_BUTTON .EasyButton-3 {
+      position: absolute;
+      z-index: 2; }
+      .MAIN__EASY_BUTTON .EasyButton-3__button {
+        width: 80px;
+        border-radius: 100%;
+        height: 80px;
+        background: url("../assets/bonus_ico/PixelUp5.png") no-repeat;
+        background-size: contain;
+        clip-path: circle(50%);
+        border: none; }
+  .MAIN__MEDIUM_BUTTON {
+    height: 90%;
+    width: 90%;
+    margin: 0 auto; }
+    .MAIN__MEDIUM_BUTTON .MediumButton-1 {
+      position: absolute;
+      z-index: 2; }
+      .MAIN__MEDIUM_BUTTON .MediumButton-1__button {
+        width: 70px;
+        border-radius: 100%;
+        height: 70px;
+        background: url("../assets/bonus_ico/Points_20.png");
+        background-size: cover;
+        clip-path: circle(50%);
+        border: none; }
+    .MAIN__MEDIUM_BUTTON .MediumButton-2 {
+      position: absolute;
+      z-index: 2; }
+      .MAIN__MEDIUM_BUTTON .MediumButton-2__button {
+        width: 70px;
+        height: 70px;
+        background: url("../assets/bonus_ico/StopTime5s.png") no-repeat center/contain;
+        border: none; }
+    .MAIN__MEDIUM_BUTTON .MediumButton-3 {
+      position: absolute;
+      z-index: 2; }
+      .MAIN__MEDIUM_BUTTON .MediumButton-3__button {
+        width: 70px;
+        border-radius: 100%;
+        height: 70px;
+        background: url("../assets/bonus_ico/PixelUp10.png") no-repeat;
+        background-size: contain;
+        clip-path: circle(50%);
+        border: none; }
+  .MAIN__HARD_BUTTON {
+    height: 90%;
+    width: 90%;
+    margin: 0 auto; }
+    .MAIN__HARD_BUTTON .HardButton-1 {
+      position: absolute;
+      z-index: 2; }
+      .MAIN__HARD_BUTTON .HardButton-1__button {
+        width: 50px;
+        border-radius: 100%;
+        height: 50px;
+        background: url("../assets/bonus_ico/Points_30.png");
+        background-size: cover;
+        clip-path: circle(50%);
+        border: none; }
+    .MAIN__HARD_BUTTON .HardButton-2 {
+      position: absolute;
+      z-index: 2; }
+      .MAIN__HARD_BUTTON .HardButton-2__button {
+        width: 50px;
+        height: 50px;
+        background: url("../assets/bonus_ico/StopTime8s.png") no-repeat center/contain;
+        border: none; }
+    .MAIN__HARD_BUTTON .HardButton-3 {
+      position: absolute;
+      z-index: 2; }
+      .MAIN__HARD_BUTTON .HardButton-3__button {
+        width: 50px;
+        border-radius: 100%;
+        height: 50px;
+        background: url("../assets/bonus_ico/PixelUp20.png") no-repeat;
+        background-size: contain;
+        clip-path: circle(50%);
+        border: none; } }
 
 /*# sourceMappingURL=clicker.css.map */
