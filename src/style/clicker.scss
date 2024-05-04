@@ -421,12 +421,12 @@ body {
         border: solid black 1px;
         display: flex;
         width: 100%;
-
+        align-items: center;
 
         &--logo {
           padding: 5px;
           border: solid black 1px;
-          width: 10%;
+          width: 15%;
           background: #1e1e1e;
         }
 
