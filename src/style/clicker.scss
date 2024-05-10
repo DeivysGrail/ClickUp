@@ -1,5 +1,6 @@
 @import 'variables';
 
+￼￼
 @font-face {
   src: url('../assets/PixeloidMono-VGj6x.ttf') format("opentype");
   font-family: Pixel;
@@ -402,7 +403,7 @@ body {
 
 
         &--data {
-
+            text-transform: uppercase;
           &:first-child {
 
             background: linear-gradient(
