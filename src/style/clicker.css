@@ -6,7 +6,9 @@
 /*  Colors :   */
 /*  Border Radius   */
 /*  Borders   */
-@font-face {}
+@font-face {
+  src: url("../assets/PixeloidMono-VGj6x.ttf") format("opentype");
+  font-family: Pixel; }
 *, ::after, ::before {
   margin: 0;
   padding: 0;
@@ -16,7 +18,7 @@ body {
   background: url("../assets/clickuUp_bg.jpg") no-repeat center/cover;
   height: 100vh;
   overflow: hidden;
-  font-family: Poppins, sans-serif; }
+  font-family: Pixel, sans-serif; }
 
 .MAIN {
   height: 100vh;
@@ -222,12 +224,14 @@ body {
       padding: 5px 20px;
       height: 50px;
       border-radius: 5px;
-      border: solid  #f1f1f1 1px;
+      border: solid #f1f1f1 1px;
       letter-spacing: 2px;
       width: max-content;
+      margin-top: 5px;
       background: #1e1e1e;
       font-weight: bold;
-      color: #f1f1f1; }
+      color: #f1f1f1;
+      font-family: Pixel, sans-serif; }
     .MAIN__LOOSE--openButton {
       top: 0;
       position: absolute;
@@ -248,6 +252,81 @@ body {
       top: 3%;
       width: 50px;
       height: 50px; }
+    .MAIN__LOOSE__TABLEAU_DES_SCORES {
+      background: rgba(40, 36, 36, 0.59);
+      padding: 20px 10px;
+      border-radius: 0.5rem;
+      width: 500px;
+      text-align: center;
+      color: #f1f1f1;
+      font-size: 1rem; }
+      .MAIN__LOOSE__TABLEAU_DES_SCORES__list {
+        list-style-type: none;
+        height: 300px;
+        line-height: 3;
+        overflow-y: scroll; }
+        .MAIN__LOOSE__TABLEAU_DES_SCORES__list::-webkit-scrollbar {
+          background: rgba(30, 30, 30, 0.86);
+          width: 5px;
+          height: 5px; }
+        .MAIN__LOOSE__TABLEAU_DES_SCORES__list::-webkit-scrollbar-thumb {
+          background: #f1f1f1;
+          height: 5px;
+          width: 1px; }
+        .MAIN__LOOSE__TABLEAU_DES_SCORES__list--data:first-child {
+          background: linear-gradient(90deg, red 0%, #ff9a00 20%, #de7021 30%, #91dc4a 40%, #3fdad8 50%, #e22fdf 70%, #1c7fee 75%, #5f15f2 80%, #ba0cf8 90%, #fb07da 96%, red 100%);
+          font-size: 1.5rem;
+          background-clip: text;
+          color: transparent; }
+        .MAIN__LOOSE__TABLEAU_DES_SCORES__list--data:nth-child(2) {
+          color: black;
+          font-size: 1.125rem;
+          border-bottom: solid gold 5px; }
+        .MAIN__LOOSE__TABLEAU_DES_SCORES__list--data:nth-child(3) {
+          font-size: 1rem;
+          color: gold; }
+        .MAIN__LOOSE__TABLEAU_DES_SCORES__list--data:nth-child(4) {
+          font-size: 1rem;
+          color: silver; }
+        .MAIN__LOOSE__TABLEAU_DES_SCORES__list--data:nth-child(5) {
+          font-size: 1rem;
+          color: chocolate; }
+      .MAIN__LOOSE__TABLEAU_DES_SCORES__form {
+        display: flex;
+        flex-direction: column;
+        margin: 10px auto 0;
+        align-items: flex-end;
+        height: 150px;
+        font-family: Pixel, sans-serif;
+        font-size: 1.25rem; }
+        .MAIN__LOOSE__TABLEAU_DES_SCORES__form--label {
+          display: block;
+          width: 100%; }
+        .MAIN__LOOSE__TABLEAU_DES_SCORES__form--input {
+          margin-top: 5px;
+          width: 80%;
+          height: 50px;
+          background: black;
+          color: #f1f1f1;
+          text-align: center;
+          text-decoration: underline 4px white;
+          text-transform: uppercase;
+          border: solid #f1f1f1 2px;
+          border-radius: 0.25rem;
+          font-family: Pixel, sans-serif; }
+        .MAIN__LOOSE__TABLEAU_DES_SCORES__form--button {
+          margin: 10px auto;
+          width: 50%;
+          height: 40px;
+          text-transform: uppercase;
+          font-family: Pixel, sans-serif;
+          background: #1e1e1e;
+          color: #f1f1f1;
+          border: solid #f1f1f1 2px; }
+      .MAIN__LOOSE__TABLEAU_DES_SCORES--see-more {
+        font-size: 0.8rem;
+        cursor: pointer;
+        text-decoration: underline white 1px; }
   .MAIN__INSTRUCTIONS {
     position: relative;
     width: 800px;
@@ -545,5 +624,50 @@ body {
         background-size: contain;
         clip-path: circle(50%);
         border: none; } }
+@media screen and (max-width: 520px) {
+  .MAIN__LOOSE__TABLEAU_DES_SCORES {
+    width: 300px; }
+    .MAIN__LOOSE__TABLEAU_DES_SCORES__list--data:first-child {
+      font-size: 1.25rem; }
+    .MAIN__LOOSE__TABLEAU_DES_SCORES__list--data:nth-child(2) {
+      font-size: 1rem; }
+    .MAIN__LOOSE__TABLEAU_DES_SCORES__list--data:nth-child(3) {
+      font-size: 1rem; }
+    .MAIN__LOOSE__TABLEAU_DES_SCORES__form {
+      display: flex;
+      flex-direction: column;
+      margin: 10px auto 0;
+      align-items: flex-end;
+      height: 150px;
+      font-family: Pixel, sans-serif;
+      font-size: 1.25rem; }
+      .MAIN__LOOSE__TABLEAU_DES_SCORES__form--label {
+        display: block;
+        width: 100%; }
+      .MAIN__LOOSE__TABLEAU_DES_SCORES__form--input {
+        margin-top: 5px;
+        width: 80%;
+        height: 50px;
+        background: black;
+        color: #f1f1f1;
+        text-align: center;
+        text-decoration: underline 4px white;
+        text-transform: uppercase;
+        border: solid #f1f1f1 2px;
+        border-radius: 0.25rem;
+        font-family: Pixel, sans-serif; }
+      .MAIN__LOOSE__TABLEAU_DES_SCORES__form--button {
+        margin: 10px auto;
+        width: 50%;
+        height: 40px;
+        text-transform: uppercase;
+        font-family: Pixel, sans-serif;
+        background: #1e1e1e;
+        color: #f1f1f1;
+        border: solid #f1f1f1 2px; }
+    .MAIN__LOOSE__TABLEAU_DES_SCORES--see-more {
+      font-size: 0.8rem;
+      cursor: pointer;
+      text-decoration: underline white 1px; } }
 
 /*# sourceMappingURL=clicker.css.map */

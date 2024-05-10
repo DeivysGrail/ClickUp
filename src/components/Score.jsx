@@ -1,4 +1,6 @@
+
 function Score(props) {
+
 
 
     return (<div className={'MAIN__SCORE'}>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="IU-241.15989.150">
+    <data-source name="Firebird" uuid="d5e90547-03ef-4a21-a6bb-2d932b967c98">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="FIREBIRD" />
+      <secret-storage>master_key</secret-storage>
+      <schema-mapping />
+    </data-source>
+  </component>
+</project>

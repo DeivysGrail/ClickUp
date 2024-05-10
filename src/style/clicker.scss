@@ -1,8 +1,10 @@
 @import 'variables';
 
 @font-face {
-
+  src: url('../assets/PixeloidMono-VGj6x.ttf') format("opentype");
+  font-family: Pixel;
 }
+
 
 *, ::after, ::before {
   margin: 0;
@@ -15,7 +17,7 @@ body {
   background: url("../assets/clickuUp_bg.jpg") no-repeat center / cover;
   height: 100vh;
   overflow: hidden;
-  font-family: $Poppins;
+  font-family: Pixel, sans-serif;
 }
 
 
@@ -324,8 +326,8 @@ body {
     &--highScore {
       margin-bottom: 20px;
       color: #f1f1f1;
-    border-bottom-left-radius: $border-radius-lg;
-    border-bottom-right-radius: $border-radius-lg;
+      border-bottom-left-radius: $border-radius-lg;
+      border-bottom-right-radius: $border-radius-lg;
       background: rgba(40, 36, 36, 0.59);
       padding: 20px 30px;
       backdrop-filter: blur(20px);
@@ -335,13 +337,16 @@ body {
       padding: 5px 20px;
       height: 50px;
       border-radius: 5px;
-      border: solid  #f1f1f1 1px;
+      border: solid #f1f1f1 1px;
       letter-spacing: 2px;
       width: max-content;
+      margin-top: 5px;
       background: #1e1e1e;
       font-weight: bold;
       color: #f1f1f1;
-      }
+      font-family: Pixel, sans-serif;
+
+    }
 
     &--openButton {
       top: 0;
@@ -367,6 +372,137 @@ body {
       width: 50px;
       height: 50px;
     }
+
+
+    &__TABLEAU_DES_SCORES {
+      background: rgba(40, 36, 36, 0.59);
+      padding: 20px 10px;
+      border-radius: $border-radius-lg;
+      width: 500px;
+      text-align: center;
+      color: #f1f1f1;
+      font-size: $fs-16;
+
+      &__list {
+        list-style-type: none;
+        height: 300px;
+        line-height: 3;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          background: rgba(30, 30, 30, 0.86);
+          width: 5px;
+          height: 5px;
+        }
+        &::-webkit-scrollbar-thumb {
+          background:#f1f1f1;
+          height: 5px;
+          width: 1px;
+        }
+
+
+        &--data {
+
+          &:first-child {
+
+            background: linear-gradient(
+                            90deg,
+                            rgba(255, 0, 0, 1) 0%,
+                            rgba(255, 154, 0, 1) 20%,
+                            rgb(222, 112, 33) 30%,
+                            rgb(145, 220, 74) 40%,
+                            rgba(63, 218, 216, 1) 50%,
+                            rgb(226, 47, 223) 70%,
+                            rgba(28, 127, 238, 1) 75%,
+                            rgba(95, 21, 242, 1) 80%,
+                            rgba(186, 12, 248, 1) 90%,
+                            rgb(251, 7, 218) 96%,
+                            rgba(255, 0, 0, 1) 100%
+            );
+            font-size: $fs-24;
+            background-clip: text;
+            color: transparent;
+          }
+
+          &:nth-child(2) {
+            color: black;
+            font-size: $fs-18;
+            border-bottom: solid gold 5px;
+
+          }
+
+          &:nth-child(3) {
+            font-size: $fs-16;
+            color: gold;
+
+          }
+          &:nth-child(4) {
+            font-size: $fs-16;
+            color: silver;
+          }
+          &:nth-child(5) {
+            font-size: $fs-16;
+            color: chocolate;
+          }
+        }
+
+
+      }
+
+
+      &__form {
+        display: flex;
+        flex-direction: column;
+        margin: 10px auto 0;
+        align-items: flex-end;
+        height: 150px;
+        font-family: Pixel, sans-serif;
+        font-size: $fs-20;
+
+        &--label {
+          display: block;
+          width: 100%;
+        }
+
+
+        &--input {
+          margin-top: 5px;
+          width: 80%;
+          height: 50px;
+          background: black;
+          color: #f1f1f1;
+          text-align: center;
+          text-decoration: underline 4px white;
+          text-transform: uppercase;
+          border: solid #f1f1f1 2px;
+          border-radius: $border-radius-m;
+          font-family: Pixel, sans-serif;
+
+        }
+
+        &--button {
+          margin: 10px auto;
+          width: 50%;
+          height: 40px;
+          text-transform: uppercase;
+          font-family: Pixel, sans-serif;
+          background: #1e1e1e;
+          color: #f1f1f1;
+          border: solid #f1f1f1 2px;
+        }
+      }
+
+
+      &--see-more {
+        font-size: $fs-14;
+        cursor: pointer;
+        text-decoration: underline white 1px;
+      }
+
+
+    }
+
+
   }
 
   &__INSTRUCTIONS {
@@ -380,7 +516,6 @@ body {
     border-radius: $border-radius-xxl;
     transform: translateY(-60%);
     background: #1f1f1e;
-    //height: max-content;
     color: #f1f1f1;
     padding: 10px;
     z-index: 301;
@@ -464,6 +599,8 @@ body {
       width: 200px;
     }
   }
+
+
 }
 
 // -- INSTRUCTIONS -- //
@@ -591,7 +728,7 @@ body {
 @media screen and (max-width: 775px) {
 
 
-  .MAIN   {
+  .MAIN {
 
     &__LOOSE {
       &--closeButton {
@@ -606,6 +743,7 @@ body {
       width: 80vw;
       padding: 5px;
       height: 80%;
+
       &__header {
 
         &--logo {
@@ -674,10 +812,10 @@ body {
 
     &__header {
 
-    &--explication {
-    font-size: $fs-16;
-      text-align: center;
-    }
+      &--explication {
+        font-size: $fs-16;
+        text-align: center;
+      }
 
     }
 
@@ -777,35 +915,46 @@ body {
 
 @media screen and (max-width: 768px) {
 
-.MAIN__SCORE {
+  .MAIN__SCORE {
 
-  &--score {
-    font-size: $fs-24;}
-  &--highScore {
-    font-size: $fs-18;}
+    &--score {
+      font-size: $fs-24;
+    }
+
+    &--highScore {
+      font-size: $fs-18;
+    }
+  }
+
 }
 
-}
 @media screen and (max-width: 530px) {
 
-.MAIN__SCORE {
+  .MAIN__SCORE {
 
-  &--score {
-    font-size: $fs-20;}
-  &--highScore {
-    font-size: $fs-16;}
+    &--score {
+      font-size: $fs-20;
+    }
+
+    &--highScore {
+      font-size: $fs-16;
+    }
+  }
+
 }
 
-}
 @media screen and (max-width: 375px) {
 
-.MAIN__SCORE {
+  .MAIN__SCORE {
 
-  &--score {
-    font-size: $fs-18;}
-  &--highScore {
-    font-size: $fs-14;}
-}
+    &--score {
+      font-size: $fs-18;
+    }
+
+    &--highScore {
+      font-size: $fs-14;
+    }
+  }
 
 }
 
@@ -997,5 +1146,93 @@ body {
 
 
   }
+
+}
+
+// Tableau des scores
+
+@media screen and (max-width: 520px) {
+
+
+  .MAIN__LOOSE__TABLEAU_DES_SCORES {
+
+    width: 300px;
+
+
+    &__list {
+
+
+      &--data {
+
+        &:first-child {
+          font-size: $fs-20;
+        }
+
+        &:nth-child(2) {
+          font-size: $fs-16;
+
+        }
+
+        &:nth-child(3) {
+          font-size: $fs-16;
+        }
+      }
+
+
+    }
+
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      margin: 10px auto 0;
+      align-items: flex-end;
+      height: 150px;
+      font-family: Pixel, sans-serif;
+      font-size: $fs-20;
+
+      &--label {
+        display: block;
+        width: 100%;
+      }
+
+
+      &--input {
+        margin-top: 5px;
+        width: 80%;
+        height: 50px;
+        background: black;
+        color: #f1f1f1;
+        text-align: center;
+        text-decoration: underline 4px white;
+        text-transform: uppercase;
+        border: solid #f1f1f1 2px;
+        border-radius: $border-radius-m;
+        font-family: Pixel, sans-serif;
+
+      }
+
+      &--button {
+        margin: 10px auto;
+        width: 50%;
+        height: 40px;
+        text-transform: uppercase;
+        font-family: Pixel, sans-serif;
+        background: #1e1e1e;
+        color: #f1f1f1;
+        border: solid #f1f1f1 2px;
+      }
+    }
+
+
+    &--see-more {
+      font-size: $fs-14;
+      cursor: pointer;
+      text-decoration: underline white 1px;
+    }
+
+
+  }
+
 
 }

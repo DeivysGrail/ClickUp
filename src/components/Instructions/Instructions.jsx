@@ -39,7 +39,7 @@ function Instructions(props) {
                         10, 20 ou 30 points supplémentaires pour ton score.</p>
                 </div>
             </div>
-            <button className="MAIN__INSTRUCTIONS--startButton" onClick={props.startGame}>COMMENCER</button>
+            {!props.loose &&    <button className="MAIN__INSTRUCTIONS--startButton" onClick={props.startGame}>COMMENCER</button>}
         </div>
     );
 }

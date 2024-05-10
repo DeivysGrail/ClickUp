@@ -160,7 +160,7 @@ function Game(props) {
             setScore(score += 1)
         }}>
             <Score score={score} highScore={highScore}/>
-            {instruction && <Instructions startGame={() => {
+            {instruction && <Instructions loose={loose} startGame={() => {
                 setFallingTrigger(true)
                 setBonus(true)
                 setInstructions(false)
@@ -189,8 +189,6 @@ function Game(props) {
                 setPixel(5)
                 setTimeout(() => setPixel(1.2), 10 * 1000)
             }}></EasyBoutonBonus>}
-            {/*<h1>{Math.round(speed)}/ms</h1>*/}
-            {/*<h1>safe_zone + {pixel} by click</h1>*/}
             <div ref={KEEP_SAFE_ZONE_REF} style={{top: translationY + "px"}} className="zone-in zoneToKeepSafe">
                 <img id={"OVNI"} className={"zoneToKeepSafe--img"} src={ovni} alt=""/>
             </div>
