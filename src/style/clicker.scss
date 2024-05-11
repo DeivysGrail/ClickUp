@@ -298,8 +298,7 @@ body {
     text-align: center;
     width: 100%;
     inset: 0;
-    font-size: $fs-24;
-    position: absolute;
+     position: absolute;
     z-index: 300;
     height: 100vh;
     background: transparent;
@@ -308,6 +307,7 @@ body {
 
 
     &--text {
+font-size: $fs-20;
       color: #f1f1f1;
       background: rgba(40, 36, 36, 0.59);
       border-top-left-radius: $border-radius-xxl;
@@ -317,6 +317,7 @@ body {
     }
 
     &--score {
+font-size: $fs-20;
       color: #f1f1f1;
       background: rgba(40, 36, 36, 0.59);
       border-radius: $border-radius-xl;
@@ -325,7 +326,8 @@ body {
     }
 
     &--highScore {
-      margin-bottom: 20px;
+font-size: $fs-20;
+      
       color: #f1f1f1;
       border-bottom-left-radius: $border-radius-lg;
       border-bottom-right-radius: $border-radius-lg;
@@ -350,9 +352,10 @@ body {
     }
 
     &--openButton {
-      top: 0;
+      bottom: 0;
+right : 0;
       position: absolute;
-      margin-top: 20px;
+      margin: 20px;
       border: solid black 1px;
       border-radius: 50%;
       width: 50px;
