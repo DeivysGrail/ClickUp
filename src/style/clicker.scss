@@ -370,6 +370,8 @@ body {
       padding: 20px 10px;
       border-radius: $border-radius-lg;
       width: 500px;
+      display: flex;
+      flex-direction: column;
       text-align: center;
       color: #f1f1f1;
       font-size: $fs-16;
@@ -733,7 +735,7 @@ body {
 
   .MAIN {
 
-    
+
 
     &__INSTRUCTIONS {
 
@@ -900,18 +902,35 @@ body {
 //Taille de l'écran de défaite
 
 @media screen and (max-height:770px)  {
-  .MAIN__LOOSE {
-    //top: 40%;
-    //transform: translateY(-50%);
 
+  .MAIN__LOOSE {
+
+
+    &--button {
+
+    }
     &__TABLEAU_DES_SCORES {
-      height: 300px;
+      height: 500px;
+
+
+      &__form {
+      }
     }
 
 
 
 
 
+  }
+}
+@media screen and (max-height:690px)  {
+
+  .MAIN__LOOSE {
+
+
+    &__TABLEAU_DES_SCORES {
+      height: 400px;
+    }
   }
 }
 
@@ -1240,3 +1259,4 @@ body {
 
 
 }
+
