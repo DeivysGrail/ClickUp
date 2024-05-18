@@ -15,7 +15,6 @@
 
 body {
   background: url("../assets/clickuUp_bg.jpg") no-repeat center / cover;
-  height: 100vh;
   overflow: hidden;
   font-family: Pixel, sans-serif;
 }
@@ -73,7 +72,7 @@ body {
 
   .deathZone {
     color: #f1f1F1;
-    background-size: 1%;
+    background-size: 2%;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -296,44 +295,41 @@ body {
     justify-content: center;
     text-align: center;
     width: 100%;
-    inset: 0;
-    font-size: $fs-24;
     position: absolute;
     z-index: 300;
     height: 100vh;
     background: transparent;
     margin: 0 auto;
-    overflow: hidden;
 
 
     &--text {
+    font-size: $fs-20;
       color: #f1f1f1;
       background: rgba(40, 36, 36, 0.59);
       border-top-left-radius: $border-radius-xxl;
       border-top-right-radius: $border-radius-xxl;
-      padding: 20px 30px;
+      padding: 10px 30px;
       backdrop-filter: blur(20px);
     }
 
     &--score {
       color: #f1f1f1;
+      font-size: $fs-20;
       background: rgba(40, 36, 36, 0.59);
-      border-radius: $border-radius-xl;
-      padding: 20px 30px;
+      padding: 10px 30px;
       backdrop-filter: blur(20px);
     }
 
     &--highScore {
-      margin-bottom: 20px;
+      //margin-bottom: 10px;
       color: #f1f1f1;
-      border-bottom-left-radius: $border-radius-lg;
-      border-bottom-right-radius: $border-radius-lg;
       background: rgba(40, 36, 36, 0.59);
       padding: 20px 30px;
       backdrop-filter: blur(20px);
     }
 
     &--button {
+
       padding: 5px 20px;
       height: 50px;
       border-radius: 5px;
@@ -349,9 +345,10 @@ body {
     }
 
     &--openButton {
-      top: 0;
+      bottom: 0;
+      right: 0;
       position: absolute;
-      margin-top: 20px;
+      margin: 20px;
       border: solid black 1px;
       border-radius: 50%;
       width: 50px;
@@ -363,15 +360,8 @@ body {
 
     }
 
-    &--closeButton {
-      cursor: pointer;
-      position: absolute;
-      right: 5%;
-      display: block;
-      top: 3%;
-      width: 50px;
-      height: 50px;
-    }
+
+    //S'OCCUPER DU RESPONSIVE' DU TABLEAUX DES SCORES
 
 
     &__TABLEAU_DES_SCORES {
@@ -379,6 +369,8 @@ body {
       padding: 20px 10px;
       border-radius: $border-radius-lg;
       width: 500px;
+      display: flex;
+      flex-direction: column;
       text-align: center;
       color: #f1f1f1;
       font-size: $fs-16;
@@ -455,7 +447,7 @@ body {
         flex-direction: column;
         margin: 10px auto 0;
         align-items: flex-end;
-        height: 150px;
+        //height: 150px;
         font-family: Pixel, sans-serif;
         font-size: $fs-20;
 
@@ -525,7 +517,7 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-
+      justify-content: center;
       &--logo {
         width: 30%;
       }
@@ -598,6 +590,18 @@ body {
       margin: 20px auto 10px;
       width: 200px;
     }
+
+    &--closeButton {
+      cursor: pointer;
+      position: absolute;
+      right: 5%;
+      display: block;
+      top: 3%;
+      width: 50px;
+      height: 50px;
+    }
+
+
   }
 
 
@@ -730,13 +734,7 @@ body {
 
   .MAIN {
 
-    &__LOOSE {
-      &--closeButton {
-        top: 1%;
-        width: 40px;
-        height: 40px;
-      }
-    }
+
 
     &__INSTRUCTIONS {
 
@@ -902,13 +900,37 @@ body {
 
 //Taille de l'écran de défaite
 
-@media screen and (max-width: 960px) {
+@media screen and (max-height:770px)  {
 
   .MAIN__LOOSE {
 
-    font-size: $fs-20;
-  }
 
+    &--button {
+
+    }
+    &__TABLEAU_DES_SCORES {
+      height: 500px;
+
+
+      &__form {
+      }
+    }
+
+
+
+
+
+  }
+}
+@media screen and (max-height:690px)  {
+
+  .MAIN__LOOSE {
+
+
+    &__TABLEAU_DES_SCORES {
+      height: 400px;
+    }
+  }
 }
 
 // Gestion de l'affichage du score
@@ -1236,3 +1258,4 @@ body {
 
 
 }
+

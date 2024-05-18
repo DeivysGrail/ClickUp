@@ -16,7 +16,6 @@
 
 body {
   background: url("../assets/clickuUp_bg.jpg") no-repeat center/cover;
-  height: 100vh;
   overflow: hidden;
   font-family: Pixel, sans-serif; }
 
@@ -59,7 +58,7 @@ body {
         background: transparent; }
   .MAIN .deathZone {
     color: #f1f1F1;
-    background-size: 1%;
+    background-size: 2%;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -191,32 +190,27 @@ body {
     justify-content: center;
     text-align: center;
     width: 100%;
-    inset: 0;
-    font-size: 1.5rem;
     position: absolute;
     z-index: 300;
     height: 100vh;
     background: transparent;
-    margin: 0 auto;
-    overflow: hidden; }
+    margin: 0 auto; }
     .MAIN__LOOSE--text {
+      font-size: 1.25rem;
       color: #f1f1f1;
       background: rgba(40, 36, 36, 0.59);
       border-top-left-radius: 2rem;
       border-top-right-radius: 2rem;
-      padding: 20px 30px;
+      padding: 10px 30px;
       backdrop-filter: blur(20px); }
     .MAIN__LOOSE--score {
       color: #f1f1f1;
+      font-size: 1.25rem;
       background: rgba(40, 36, 36, 0.59);
-      border-radius: 1rem;
-      padding: 20px 30px;
+      padding: 10px 30px;
       backdrop-filter: blur(20px); }
     .MAIN__LOOSE--highScore {
-      margin-bottom: 20px;
       color: #f1f1f1;
-      border-bottom-left-radius: 0.5rem;
-      border-bottom-right-radius: 0.5rem;
       background: rgba(40, 36, 36, 0.59);
       padding: 20px 30px;
       backdrop-filter: blur(20px); }
@@ -233,9 +227,10 @@ body {
       color: #f1f1f1;
       font-family: Pixel, sans-serif; }
     .MAIN__LOOSE--openButton {
-      top: 0;
+      bottom: 0;
+      right: 0;
       position: absolute;
-      margin-top: 20px;
+      margin: 20px;
       border: solid black 1px;
       border-radius: 50%;
       width: 50px;
@@ -244,19 +239,13 @@ body {
       text-transform: uppercase;
       letter-spacing: 2px;
       z-index: 1000; }
-    .MAIN__LOOSE--closeButton {
-      cursor: pointer;
-      position: absolute;
-      right: 5%;
-      display: block;
-      top: 3%;
-      width: 50px;
-      height: 50px; }
     .MAIN__LOOSE__TABLEAU_DES_SCORES {
       background: rgba(40, 36, 36, 0.59);
       padding: 20px 10px;
       border-radius: 0.5rem;
       width: 500px;
+      display: flex;
+      flex-direction: column;
       text-align: center;
       color: #f1f1f1;
       font-size: 1rem; }
@@ -296,7 +285,6 @@ body {
         flex-direction: column;
         margin: 10px auto 0;
         align-items: flex-end;
-        height: 150px;
         font-family: Pixel, sans-serif;
         font-size: 1.25rem; }
         .MAIN__LOOSE__TABLEAU_DES_SCORES__form--label {
@@ -344,7 +332,8 @@ body {
     .MAIN__INSTRUCTIONS__header {
       display: flex;
       flex-direction: column;
-      align-items: center; }
+      align-items: center;
+      justify-content: center; }
       .MAIN__INSTRUCTIONS__header--logo {
         width: 30%; }
       .MAIN__INSTRUCTIONS__header--explication {
@@ -360,7 +349,8 @@ body {
       .MAIN__INSTRUCTIONS__bonus__BONUS_CONTAINER {
         border: solid black 1px;
         display: flex;
-        width: 100%; }
+        width: 100%;
+        align-items: center; }
         .MAIN__INSTRUCTIONS__bonus__BONUS_CONTAINER--logo {
           padding: 5px;
           border: solid black 1px;
@@ -380,6 +370,14 @@ body {
       border: none;
       margin: 20px auto 10px;
       width: 200px; }
+    .MAIN__INSTRUCTIONS--closeButton {
+      cursor: pointer;
+      position: absolute;
+      right: 5%;
+      display: block;
+      top: 3%;
+      width: 50px;
+      height: 50px; }
 
 @media screen and (max-width: 910px) {
   .MAIN__INSTRUCTIONS {
@@ -432,10 +430,6 @@ body {
           margin-left: 10px;
           border-bottom: solid #f1f1f1 2px; } }
 @media screen and (max-width: 775px) {
-  .MAIN__LOOSE--closeButton {
-    top: 1%;
-    width: 40px;
-    height: 40px; }
   .MAIN__INSTRUCTIONS {
     width: 80vw;
     padding: 5px;
@@ -503,9 +497,12 @@ body {
 @media screen and (max-width: 770px) {
   #OVNI {
     width: 200%; } }
-@media screen and (max-width: 960px) {
-  .MAIN__LOOSE {
-    font-size: 1.25rem; } }
+@media screen and (max-height: 770px) {
+  .MAIN__LOOSE__TABLEAU_DES_SCORES {
+    height: 500px; } }
+@media screen and (max-height: 690px) {
+  .MAIN__LOOSE__TABLEAU_DES_SCORES {
+    height: 400px; } }
 @media screen and (max-width: 768px) {
   .MAIN__SCORE--score {
     font-size: 1.5rem; }

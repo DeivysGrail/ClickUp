@@ -160,14 +160,14 @@ function Game(props) {
             setScore(score += 1)
         }}>
             <Score score={score} highScore={highScore}/>
-            {instruction && <Instructions loose={loose} startGame={() => {
+            {instruction && <Instructions actif={loose} trigger={() => setInstructions(false)} loose={loose} startGame={() => {
                 setFallingTrigger(true)
                 setBonus(true)
                 setInstructions(false)
             }}/>}
-            {<h1>{loose &&
-                <Loose actif={instruction} trigger={() => setInstructions(false)} score={score} highScore={highScore}
-                       tryAgain={() => location.reload()} triggerInfo={() => setInstructions(true)}/>}</h1>}
+           {loose &&
+                <Loose actif={instruction}  score={score} highScore={highScore}
+                       tryAgain={() => location.reload()} triggerInfo={() => setInstructions(true)}/>}
             {(medium && bonus) && <MediumBoutonBonus medium1={() => setScore(score += 19)} medium2={() => {
                 setFallingTrigger(false)
                 setTimeout(() => setFallingTrigger(true), 5 * 1000)
