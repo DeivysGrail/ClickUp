@@ -746,11 +746,12 @@ body {
 
         &--logo {
           width: 30%;
-          //margin-bottom: 20px;
+    
           margin: 0 auto;
         }
 
         &--text {
+          text-align: center;
           margin-top: 10px;
           font-size: 1.4rem;
         }
